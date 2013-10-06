@@ -1,3 +1,4 @@
+# reload
 FROM dpaw/postgresql:9.3
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 

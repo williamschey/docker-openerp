@@ -12,5 +12,5 @@ ADD postgresql.conf /etc/postgresql/9.2/main/postgresql.conf
 RUN chown postgres:postgres -R /etc/postgresql
 
 # Run PostgreSQL and expose its port
-CMD ["sh", "-c", "/etc/init.d/postgresql start && tail -f /var/log/postgresql/postgresql-9.3-main.log"]
+CMD ["sh", "-c", "/etc/init.d/postgresql start && tail -f /var/log/postgresql/postgresql-9.2-main.log"]
 EXPOSE 5432
