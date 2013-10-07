@@ -1,4 +1,4 @@
-FROM dpaw/ubuntu:12.04
+FROM dpaw/postgis:2.1
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 # Install CKAN dependencies
@@ -9,7 +9,7 @@ apt-get update; \
 echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections; \
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections; \
 apt-get install -y oracle-java7-installer; \
-apt-get install -y python-dev postgresql libpq-dev python-pip python-virtualenv git-core solr-jetty sudo
+apt-get install -y python-dev libpq-dev python-pip python-virtualenv git-core solr-jetty sudo
 
 # Setup PostgreSQL
 ENV db_host localhost # not modifiable yet
