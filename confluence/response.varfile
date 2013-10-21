@@ -1,0 +1,12 @@
+#install4j response file for Confluence 5.3
+#Mon Oct 21 14:43:57 WST 2013
+rmiPort$Long=8000
+app.install.service$Boolean=false
+existingInstallationDir=/opt/Confluence
+sys.confirmedUpdateInstallationString=false
+sys.languageId=en
+sys.installationDir=/opt/atlassian/confluence
+app.confHome=/var/atlassian/application-data/confluence
+executeLauncherAction$Boolean=true
+httpPort$Long=8090
+portChoice=default
