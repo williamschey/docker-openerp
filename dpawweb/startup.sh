@@ -4,12 +4,15 @@
 function provision()
 {
     # start db only if local
-    $start_db
+    $db_start
+    mysql $db_name < $project_root/db_schema.sql
+    $db_stop
     # run django-admin.py deploy
 }
 
 function run()
 {
+    $db_start
     $apache2_start
     tail -f /var/log/apache2/$project_name.error.log
 }

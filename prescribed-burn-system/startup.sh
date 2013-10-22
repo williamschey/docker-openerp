@@ -3,13 +3,14 @@
 
 function provision()
 {
-    # start db only if local
-    $start_db
-    # run django-admin.py deploy
+    $db_start
+    django-admin.py deploy
+    $db_stop
 }
 
 function run()
 {
+    $db_start
     $apache2_start
     $redis_start
     tail -f -n 0 /var/log/apache2/$project_name.error.log

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mysqld &
+sleep 13s
