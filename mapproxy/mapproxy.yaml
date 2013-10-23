@@ -1,0 +1,5849 @@
+services:
+  demo:
+  kml:
+  tms:
+    # needs no arguments
+  wms:
+    srs: ['EPSG:4326', 'EPSG:900913', 'EPSG:4283', 'EPSG:28348', 'EPSG:28349', 'EPSG:28350', 'EPSG:28351', 'EPSG:28352', 'EPSG:28353', 'EPSG:28354', 'EPSG:28355', 'EPSG:28356', 'EPSG:28357', 'EPSG:28358', ]
+    image_formats: ['image/jpeg', 'image/png']
+    md:
+      # metadata used in capabilities documents
+      title: DEC MapProxy WMS Proxy
+      abstract: This is the fantastic MapProxy. It has delicious caching and lovely reprojections. All source data is in the WGS84 Datum.
+      contact:
+        person: DEC Applications
+        organization: Department of Environment and Conservation
+        address: 17 Dick Perry Ave
+        city: Kensington
+        postcode: 6151
+        country: Australia
+        email: issapps@dec.wa.gov.au
+
+layers:
+  - name: "public_3-year-master-burn-plan"
+    title: "3 Year Master Burn Plan"
+    sources: [ge34_live]
+  - name: "public_3-year-master-burn-plan_cache"
+    title: "3 Year Master Burn Plan Cached for 50000 minutes"
+    sources: [ge34_cache]
+  - name: "ge_aboriginal-communities"
+    title: "Aboriginal Communities"
+    sources: [ge214_live]
+  - name: "ge_aboriginal-communities_cache"
+    title: "Aboriginal Communities Cached for 50000 minutes"
+    sources: [ge214_cache]
+  - name: "ge_aboriginal-sites"
+    title: "Aboriginal Sites"
+    sources: [ge40_live]
+  - name: "ge_aboriginal-sites_cache"
+    title: "Aboriginal Sites Cached for 50000 minutes"
+    sources: [ge40_cache]
+  - name: "ge_ass"
+    title: "Acid sulfate soils risk map"
+    sources: [ge26_live]
+  - name: "ge_ass_cache"
+    title: "Acid sulfate soils risk map Cached for 50000 minutes"
+    sources: [ge26_cache]
+  - name: "public_ass-risk-map-albany-torbay"
+    title: "Acid sulfate soils risk map Albany-Torbay"
+    sources: [ge171_live]
+  - name: "public_ass-risk-map-albany-torbay_cache"
+    title: "Acid sulfate soils risk map Albany-Torbay Cached for 50000 minutes"
+    sources: [ge171_cache]
+  - name: "public_ass-risk-map-estuaries"
+    title: "Acid sulfate soils risk map Estuaries"
+    sources: [ge172_live]
+  - name: "public_ass-risk-map-estuaries_cache"
+    title: "Acid sulfate soils risk map Estuaries Cached for 50000 minutes"
+    sources: [ge172_cache]
+  - name: "public_ass-risk-map-geraldton"
+    title: "Acid sulfate soils risk map Geraldton"
+    sources: [ge173_live]
+  - name: "public_ass-risk-map-geraldton_cache"
+    title: "Acid sulfate soils risk map Geraldton Cached for 50000 minutes"
+    sources: [ge173_cache]
+  - name: "public_ass-risk-map-lower-sw"
+    title: "Acid sulfate soils risk map lower South West"
+    sources: [ge174_live]
+  - name: "public_ass-risk-map-lower-sw_cache"
+    title: "Acid sulfate soils risk map lower South West Cached for 50000 minutes"
+    sources: [ge174_cache]
+  - name: "public_ass-risk-map-pilbara-coastline"
+    title: "Acid sulfate soils risk map Pilbara coastline"
+    sources: [ge175_live]
+  - name: "public_ass-risk-map-pilbara-coastline_cache"
+    title: "Acid sulfate soils risk map Pilbara coastline Cached for 50000 minutes"
+    sources: [ge175_cache]
+  - name: "public_ass-risk-map-swan-coastal-plain"
+    title: "Acid sulfate soils risk map Swan Coastal Plain"
+    sources: [ge176_live]
+  - name: "public_ass-risk-map-swan-coastal-plain_cache"
+    title: "Acid sulfate soils risk map Swan Coastal Plain Cached for 50000 minutes"
+    sources: [ge176_cache]
+  - name: "ge_decfires"
+    title: "Active DEC Managed Fires (DEC-043) (04-12-2011 09:10:09)"
+    sources: [ge162_live]
+  - name: "ge_decfires_cache"
+    title: "Active DEC Managed Fires (DEC-043) (04-12-2011 09:10:09) Cached for 0 minutes"
+    sources: [ge162_cache]
+  - name: "ge_virtual-mosaic"
+    title: "Aerial imagery"
+    sources: [ge10_live]
+  - name: "ge_virtual-mosaic_cache"
+    title: "Aerial imagery Cached for 50000 minutes"
+    sources: [ge10_cache]
+  - name: "ge_apiary-sites"
+    title: "Apiary Sites"
+    sources: [ge152_live]
+  - name: "ge_apiary-sites_cache"
+    title: "Apiary Sites Cached for 50000 minutes"
+    sources: [ge152_cache]
+  - name: "ge_arvs-vegetation-units"
+    title: "ARVS vegetation units"
+    sources: [ge95_live]
+  - name: "ge_arvs-vegetation-units_cache"
+    title: "ARVS vegetation units Cached for 50000 minutes"
+    sources: [ge95_cache]
+  - name: "public_sentinel-noaa-hotspots72"
+    title: "Avhrr48to72Hours; Avhrr24to48Hours; Avhrr12to24Hours; Avhrr00to12Hours; AvhrrLastPasses"
+    sources: [ge144_live]
+  - name: "public_sentinel-noaa-hotspots72_cache"
+    title: "Avhrr48to72Hours; Avhrr24to48Hours; Avhrr12to24Hours; Avhrr00to12Hours; AvhrrLastPasses Cached for 5 minutes"
+    sources: [ge144_cache]
+  - name: "ge_IDM00007"
+    title: "BOM Fire Weather Districts | Australia | 2 M"
+    sources: [ge99_live]
+  - name: "ge_IDM00007_cache"
+    title: "BOM Fire Weather Districts | Australia | 2 M Cached for 5 minutes"
+    sources: [ge99_cache]
+  - name: "ge_bom-forecast-districts"
+    title: "BoM Forecast Districts"
+    sources: [ge202_live]
+  - name: "ge_bom-forecast-districts_cache"
+    title: "BoM Forecast Districts Cached for 50000 minutes"
+    sources: [ge202_cache]
+  - name: "ge_FESA-011"
+    title: "Bush Fire Services Stations (FESA-011)"
+    sources: [ge131_live]
+  - name: "ge_FESA-011_cache"
+    title: "Bush Fire Services Stations (FESA-011) Cached for 600 minutes"
+    sources: [ge131_cache]
+  - name: "ge_bush-forever"
+    title: "Bush Forever Sites"
+    sources: [ge41_live]
+  - name: "ge_bush-forever_cache"
+    title: "Bush Forever Sites Cached for 50000 minutes"
+    sources: [ge41_cache]
+  - name: "ge_cadastre"
+    title: "Cadastre"
+    sources: [ge7_live]
+  - name: "ge_cadastre_cache"
+    title: "Cadastre Cached for 50000 minutes"
+    sources: [ge7_cache]
+  - name: "ge_landgate-cadastre"
+    title: "Cadastre (No Attrib) (LGATE-001) (19-09-2011 02:40:40); Cadastre (Address) (LGATE-002) (19-09-2011 03:21:31)"
+    sources: [ge133_live]
+  - name: "ge_landgate-cadastre_cache"
+    title: "Cadastre (No Attrib) (LGATE-001) (19-09-2011 02:40:40); Cadastre (Address) (LGATE-002) (19-09-2011 03:21:31) Cached for 50000 minutes"
+    sources: [ge133_cache]
+  - name: "ge_carnabys-cockatoo-breeding-areas"
+    title: "Carnabys cockatoo breeding areas"
+    sources: [ge197_live]
+  - name: "ge_carnabys-cockatoo-breeding-areas_cache"
+    title: "Carnabys cockatoo breeding areas Cached for 50000 minutes"
+    sources: [ge197_cache]
+  - name: "ge_carnabys-cockatoo-feeding-jf-unconfirmed"
+    title: "Carnabys cockatoo feeding JF unconfirmed"
+    sources: [ge198_live]
+  - name: "ge_carnabys-cockatoo-feeding-jf-unconfirmed_cache"
+    title: "Carnabys cockatoo feeding JF unconfirmed Cached for 50000 minutes"
+    sources: [ge198_cache]
+  - name: "ge_carnabys-cockatoo-feeding-scp-unconf"
+    title: "Carnabys cockatoo feeding SCP unconf"
+    sources: [ge200_live]
+  - name: "ge_carnabys-cockatoo-feeding-scp-unconf_cache"
+    title: "Carnabys cockatoo feeding SCP unconf Cached for 50000 minutes"
+    sources: [ge200_cache]
+  - name: "ge_carnabys-cockatoo-roost-sites-6km-buffer"
+    title: "Carnabys cockatoo roost sites 6km buffer"
+    sources: [ge150_live]
+  - name: "ge_carnabys-cockatoo-roost-sites-6km-buffer_cache"
+    title: "Carnabys cockatoo roost sites 6km buffer Cached for 50000 minutes"
+    sources: [ge150_cache]
+  - name: "ge_clearing-permits-sde"
+    title: "Clearing permits"
+    sources: [ge156_live]
+  - name: "ge_clearing-permits-sde_cache"
+    title: "Clearing permits Cached for 50000 minutes"
+    sources: [ge156_cache]
+  - name: "ge_esa"
+    title: "Clearing Regulations - Environmentally Sensitive Areas"
+    sources: [ge43_live]
+  - name: "ge_esa_cache"
+    title: "Clearing Regulations - Environmentally Sensitive Areas Cached for 50000 minutes"
+    sources: [ge43_cache]
+  - name: "ge_cog"
+    title: "COG (CALM Operational Graphics)"
+    sources: [ge161_live]
+  - name: "ge_cog_cache"
+    title: "COG (CALM Operational Graphics) Cached for 50000 minutes"
+    sources: [ge161_cache]
+  - name: "ge_cog-relegated-tracks"
+    title: "COG Relegated Tracks"
+    sources: [ge301_live]
+  - name: "ge_cog-relegated-tracks_cache"
+    title: "COG Relegated Tracks Cached for 50000 minutes"
+    sources: [ge301_cache]
+  - name: "ge_cog-roads-sealed"
+    title: "COG Roads Sealed"
+    sources: [ge302_live]
+  - name: "ge_cog-roads-sealed_cache"
+    title: "COG Roads Sealed Cached for 50000 minutes"
+    sources: [ge302_cache]
+  - name: "ge_cog-roads-unsealed"
+    title: "COG Roads Unsealed"
+    sources: [ge303_live]
+  - name: "ge_cog-roads-unsealed_cache"
+    title: "COG Roads Unsealed Cached for 50000 minutes"
+    sources: [ge303_cache]
+  - name: "ge_cog-tracks"
+    title: "COG Tracks"
+    sources: [ge304_live]
+  - name: "ge_cog-tracks_cache"
+    title: "COG Tracks Cached for 50000 minutes"
+    sources: [ge304_cache]
+  - name: "ge_cog-trails"
+    title: "COG Trails"
+    sources: [ge44_live]
+  - name: "ge_cog-trails_cache"
+    title: "COG Trails Cached for 50000 minutes"
+    sources: [ge44_cache]
+  - name: "ge_contaminated-sites-sde"
+    title: "Contaminated sites - reported sites"
+    sources: [ge153_live]
+  - name: "ge_contaminated-sites-sde_cache"
+    title: "Contaminated sites - reported sites Cached for 50000 minutes"
+    sources: [ge153_cache]
+  - name: "ge_LGATE-015"
+    title: "Contours (LGATE-015) (08-08-2011 17:26:06)"
+    sources: [ge132_live]
+  - name: "ge_LGATE-015_cache"
+    title: "Contours (LGATE-015) (08-08-2011 17:26:06) Cached for 50000 minutes"
+    sources: [ge132_cache]
+  - name: "ge_contours-metro-topography"
+    title: "Contours metro topography"
+    sources: [ge46_live]
+  - name: "ge_contours-metro-topography_cache"
+    title: "Contours metro topography Cached for 50000 minutes"
+    sources: [ge46_cache]
+  - name: "ge_contours-state-topography"
+    title: "Contours state topography"
+    sources: [ge90_live]
+  - name: "ge_contours-state-topography_cache"
+    title: "Contours state topography Cached for 50000 minutes"
+    sources: [ge90_cache]
+  - name: "public_firewatch-lightning-daybefore"
+    title: "Day before yesterday"
+    sources: [ge142_live]
+  - name: "public_firewatch-lightning-daybefore_cache"
+    title: "Day before yesterday Cached for 5 minutes"
+    sources: [ge142_cache]
+  - name: "ge_dec-bridges"
+    title: "DEC Bridges"
+    sources: [ge249_live]
+  - name: "ge_dec-bridges_cache"
+    title: "DEC Bridges Cached for 50000 minutes"
+    sources: [ge249_cache]
+  - name: "ge_dec-communication-repeaters"
+    title: "DEC Communication Repeater Stations"
+    sources: [ge243_live]
+  - name: "ge_dec-communication-repeaters_cache"
+    title: "DEC Communication Repeater Stations Cached for 50000 minutes"
+    sources: [ge243_cache]
+  - name: "ge_covenants"
+    title: "DEC covenants"
+    sources: [ge160_live]
+  - name: "ge_covenants_cache"
+    title: "DEC covenants Cached for 50000 minutes"
+    sources: [ge160_cache]
+  - name: "public_dec-districts"
+    title: "DEC Districts"
+    sources: [ge19_live]
+  - name: "public_dec-districts_cache"
+    title: "DEC Districts Cached for 50000 minutes"
+    sources: [ge19_cache]
+  - name: "public_dec-estate-google"
+    title: "DEC Estate Google"
+    sources: [ge305_live]
+  - name: "public_dec-estate-google_cache"
+    title: "DEC Estate Google Cached for 50000 minutes"
+    sources: [ge305_cache]
+  - name: "ge_dec-fire-history"
+    title: "DEC Fire History"
+    sources: [ge255_live]
+  - name: "ge_dec-fire-history_cache"
+    title: "DEC Fire History Cached for 50000 minutes"
+    sources: [ge255_cache]
+  - name: "ge_dec-offices"
+    title: "DEC Offices and Work Centres"
+    sources: [ge244_live]
+  - name: "ge_dec-offices_cache"
+    title: "DEC Offices and Work Centres Cached for 50000 minutes"
+    sources: [ge244_cache]
+  - name: "ge_dec-proposed-1-season-burn-program"
+    title: "DEC Proposed 1 Season Burn Program"
+    sources: [ge226_live]
+  - name: "ge_dec-proposed-1-season-burn-program_cache"
+    title: "DEC Proposed 1 Season Burn Program Cached for 50000 minutes"
+    sources: [ge226_cache]
+  - name: "ge_dec-6-season-burn-program"
+    title: "DEC Proposed 6 Season Burn Program"
+    sources: [ge259_live]
+  - name: "ge_dec-6-season-burn-program_cache"
+    title: "DEC Proposed 6 Season Burn Program Cached for 50000 minutes"
+    sources: [ge259_cache]
+  - name: "public_dec-regions"
+    title: "DEC Regions"
+    sources: [ge18_live]
+  - name: "public_dec-regions_cache"
+    title: "DEC Regions Cached for 50000 minutes"
+    sources: [ge18_cache]
+  - name: "public_dec-tenure"
+    title: "DEC tenure"
+    sources: [ge16_live]
+  - name: "public_dec-tenure_cache"
+    title: "DEC tenure Cached for 50000 minutes"
+    sources: [ge16_cache]
+  - name: "ge_dia-estate"
+    title: "DIA Estate"
+    sources: [ge49_live]
+  - name: "ge_dia-estate_cache"
+    title: "DIA Estate Cached for 50000 minutes"
+    sources: [ge49_cache]
+  - name: "ge_dieback"
+    title: "Dieback"
+    sources: [ge50_live]
+  - name: "ge_dieback_cache"
+    title: "Dieback Cached for 50000 minutes"
+    sources: [ge50_cache]
+  - name: "ge_dra"
+    title: "Disease Risk Areas"
+    sources: [ge238_live]
+  - name: "ge_dra_cache"
+    title: "Disease Risk Areas Cached for 50000 minutes"
+    sources: [ge238_cache]
+  - name: "ge_hv-carrier-line"
+    title: "Distribution High Voltage Carrier Line"
+    sources: [ge256_live]
+  - name: "ge_hv-carrier-line_cache"
+    title: "Distribution High Voltage Carrier Line Cached for 50000 minutes"
+    sources: [ge256_cache]
+  - name: "ge_distribution-low-voltage-carrier-line"
+    title: "Distribution Low Voltage Carrier Line"
+    sources: [ge257_live]
+  - name: "ge_distribution-low-voltage-carrier-line_cache"
+    title: "Distribution Low Voltage Carrier Line Cached for 50000 minutes"
+    sources: [ge257_cache]
+  - name: "ge_district-em-arrangements-boundaries"
+    title: "District Emergency Management Arrangements (EM) Boundaries"
+    sources: [ge239_live]
+  - name: "ge_district-em-arrangements-boundaries_cache"
+    title: "District Emergency Management Arrangements (EM) Boundaries Cached for 50000 minutes"
+    sources: [ge239_cache]
+  - name: "ge_esd-2008"
+    title: "Emergency Services Directory (ESD)"
+    sources: [ge146_live]
+  - name: "ge_esd-2008_cache"
+    title: "Emergency Services Directory (ESD) Cached for 50000 minutes"
+    sources: [ge146_cache]
+  - name: "ge_epa-redbook"
+    title: "EPA Redbook"
+    sources: [ge56_live]
+  - name: "ge_epa-redbook_cache"
+    title: "EPA Redbook Cached for 50000 minutes"
+    sources: [ge56_cache]
+  - name: "ge_epp-areas"
+    title: "EPP areas"
+    sources: [ge69_live]
+  - name: "ge_epp-areas_cache"
+    title: "EPP areas Cached for 50000 minutes"
+    sources: [ge69_cache]
+  - name: "ge_epp-lakes"
+    title: "EPP Lakes"
+    sources: [ge55_live]
+  - name: "ge_epp-lakes_cache"
+    title: "EPP Lakes Cached for 50000 minutes"
+    sources: [ge55_cache]
+  - name: "ge_epp-western-swamp-tortoise-habitat"
+    title: "EPP Western Swamp Tortoise habitat"
+    sources: [ge66_live]
+  - name: "ge_epp-western-swamp-tortoise-habitat_cache"
+    title: "EPP Western Swamp Tortoise habitat Cached for 50000 minutes"
+    sources: [ge66_cache]
+  - name: "ge_epp-wetlands"
+    title: "EPP Wetlands"
+    sources: [ge67_live]
+  - name: "ge_epp-wetlands_cache"
+    title: "EPP Wetlands Cached for 50000 minutes"
+    sources: [ge67_cache]
+  - name: "ge_fauna-habitat-zones"
+    title: "Fauna Habitat Zones"
+    sources: [ge57_live]
+  - name: "ge_fauna-habitat-zones_cache"
+    title: "Fauna Habitat Zones Cached for 50000 minutes"
+    sources: [ge57_cache]
+  - name: "ge_fd-grid-reference-points"
+    title: "FD Grid Reference Points"
+    sources: [ge258_live]
+  - name: "ge_fd-grid-reference-points_cache"
+    title: "FD Grid Reference Points Cached for 50000 minutes"
+    sources: [ge258_cache]
+  - name: "ge_fesa-brigade-boundaries"
+    title: "FESA Brigade Boundaries"
+    sources: [ge234_live]
+  - name: "ge_fesa-brigade-boundaries_cache"
+    title: "FESA Brigade Boundaries Cached for 50000 minutes"
+    sources: [ge234_cache]
+  - name: "ge_fesa-districts"
+    title: "FESA Districts"
+    sources: [ge240_live]
+  - name: "ge_fesa-districts_cache"
+    title: "FESA Districts Cached for 50000 minutes"
+    sources: [ge240_cache]
+  - name: "ge_FESA-014"
+    title: "FESA Offices (FESA-014)"
+    sources: [ge130_live]
+  - name: "ge_FESA-014_cache"
+    title: "FESA Offices (FESA-014) Cached for 600 minutes"
+    sources: [ge130_cache]
+  - name: "ge_fesa-regions"
+    title: "FESA Regions"
+    sources: [ge241_live]
+  - name: "ge_fesa-regions_cache"
+    title: "FESA Regions Cached for 50000 minutes"
+    sources: [ge241_cache]
+  - name: "ge_FESA-020"
+    title: "Fire and Rescue Services Stations (FESA-020)"
+    sources: [ge126_live]
+  - name: "ge_FESA-020_cache"
+    title: "Fire and Rescue Services Stations (FESA-020) Cached for 600 minutes"
+    sources: [ge126_cache]
+  - name: "fire_fireassignment"
+    title: "FireAssignment"
+    sources: [ge164_live]
+  - name: "fire_fireassignment_cache"
+    title: "FireAssignment Cached for 0 minutes"
+    sources: [ge164_cache]
+  - name: "fire_fireboundary"
+    title: "FireBoundary"
+    sources: [ge165_live]
+  - name: "fire_fireboundary_cache"
+    title: "FireBoundary Cached for 0 minutes"
+    sources: [ge165_cache]
+  - name: "ge_fire-exclusion-reference-areas"
+    title: "Fire Exclusion Reference Areas"
+    sources: [ge242_live]
+  - name: "ge_fire-exclusion-reference-areas_cache"
+    title: "Fire Exclusion Reference Areas Cached for 50000 minutes"
+    sources: [ge242_cache]
+  - name: "ge_fire-frequency"
+    title: "Fire Frequency"
+    sources: [ge299_live]
+  - name: "ge_fire-frequency_cache"
+    title: "Fire Frequency Cached for 50000 minutes"
+    sources: [ge299_cache]
+  - name: "fire_fireline"
+    title: "FireLine"
+    sources: [ge166_live]
+  - name: "fire_fireline_cache"
+    title: "FireLine Cached for 0 minutes"
+    sources: [ge166_cache]
+  - name: "fire_firepoint"
+    title: "FirePoint"
+    sources: [ge167_live]
+  - name: "fire_firepoint_cache"
+    title: "FirePoint Cached for 0 minutes"
+    sources: [ge167_cache]
+  - name: "ge_fire-scars-1993"
+    title: "Fire Scars 1993"
+    sources: [ge262_live]
+  - name: "ge_fire-scars-1993_cache"
+    title: "Fire Scars 1993 Cached for 50000 minutes"
+    sources: [ge262_cache]
+  - name: "ge_fire-scars-1994"
+    title: "Fire Scars 1994"
+    sources: [ge263_live]
+  - name: "ge_fire-scars-1994_cache"
+    title: "Fire Scars 1994 Cached for 50000 minutes"
+    sources: [ge263_cache]
+  - name: "ge_fire-scars-1995"
+    title: "Fire Scars 1995"
+    sources: [ge264_live]
+  - name: "ge_fire-scars-1995_cache"
+    title: "Fire Scars 1995 Cached for 50000 minutes"
+    sources: [ge264_cache]
+  - name: "ge_fire-scars-1996"
+    title: "Fire Scars 1996"
+    sources: [ge265_live]
+  - name: "ge_fire-scars-1996_cache"
+    title: "Fire Scars 1996 Cached for 50000 minutes"
+    sources: [ge265_cache]
+  - name: "ge_fire-scars-1997"
+    title: "Fire Scars 1997"
+    sources: [ge266_live]
+  - name: "ge_fire-scars-1997_cache"
+    title: "Fire Scars 1997 Cached for 50000 minutes"
+    sources: [ge266_cache]
+  - name: "ge_fire-scars-1998"
+    title: "Fire Scars 1998"
+    sources: [ge267_live]
+  - name: "ge_fire-scars-1998_cache"
+    title: "Fire Scars 1998 Cached for 50000 minutes"
+    sources: [ge267_cache]
+  - name: "ge_fire-scars-1999"
+    title: "Fire Scars 1999"
+    sources: [ge268_live]
+  - name: "ge_fire-scars-1999_cache"
+    title: "Fire Scars 1999 Cached for 50000 minutes"
+    sources: [ge268_cache]
+  - name: "ge_fire-scars-2000"
+    title: "Fire Scars 2000"
+    sources: [ge269_live]
+  - name: "ge_fire-scars-2000_cache"
+    title: "Fire Scars 2000 Cached for 50000 minutes"
+    sources: [ge269_cache]
+  - name: "ge_fire-scars-2001"
+    title: "Fire Scars 2001"
+    sources: [ge270_live]
+  - name: "ge_fire-scars-2001_cache"
+    title: "Fire Scars 2001 Cached for 50000 minutes"
+    sources: [ge270_cache]
+  - name: "ge_fire-scars-2002"
+    title: "Fire Scars 2002"
+    sources: [ge271_live]
+  - name: "ge_fire-scars-2002_cache"
+    title: "Fire Scars 2002 Cached for 50000 minutes"
+    sources: [ge271_cache]
+  - name: "ge_fire-scars-2003"
+    title: "Fire Scars 2003"
+    sources: [ge272_live]
+  - name: "ge_fire-scars-2003_cache"
+    title: "Fire Scars 2003 Cached for 50000 minutes"
+    sources: [ge272_cache]
+  - name: "ge_fire-scars-2004"
+    title: "Fire Scars 2004"
+    sources: [ge273_live]
+  - name: "ge_fire-scars-2004_cache"
+    title: "Fire Scars 2004 Cached for 50000 minutes"
+    sources: [ge273_cache]
+  - name: "ge_fire-scars-2005"
+    title: "Fire Scars 2005"
+    sources: [ge274_live]
+  - name: "ge_fire-scars-2005_cache"
+    title: "Fire Scars 2005 Cached for 50000 minutes"
+    sources: [ge274_cache]
+  - name: "ge_fire-scars-2006"
+    title: "Fire Scars 2006"
+    sources: [ge275_live]
+  - name: "ge_fire-scars-2006_cache"
+    title: "Fire Scars 2006 Cached for 50000 minutes"
+    sources: [ge275_cache]
+  - name: "ge_fire-scars-2007"
+    title: "Fire Scars 2007"
+    sources: [ge276_live]
+  - name: "ge_fire-scars-2007_cache"
+    title: "Fire Scars 2007 Cached for 50000 minutes"
+    sources: [ge276_cache]
+  - name: "ge_fire-scars-2008"
+    title: "Fire Scars 2008"
+    sources: [ge277_live]
+  - name: "ge_fire-scars-2008_cache"
+    title: "Fire Scars 2008 Cached for 50000 minutes"
+    sources: [ge277_cache]
+  - name: "ge_fire-scars-2009"
+    title: "Fire Scars 2009"
+    sources: [ge278_live]
+  - name: "ge_fire-scars-2009_cache"
+    title: "Fire Scars 2009 Cached for 50000 minutes"
+    sources: [ge278_cache]
+  - name: "ge_fire-scars-2010"
+    title: "Fire Scars 2010"
+    sources: [ge279_live]
+  - name: "ge_fire-scars-2010_cache"
+    title: "Fire Scars 2010 Cached for 50000 minutes"
+    sources: [ge279_cache]
+  - name: "ge_fire-scars-2011"
+    title: "Fire Scars 2011"
+    sources: [ge280_live]
+  - name: "ge_fire-scars-2011_cache"
+    title: "Fire Scars 2011 Cached for 50000 minutes"
+    sources: [ge280_cache]
+  - name: "ge_fire-scars-2012"
+    title: "Fire Scars 2012"
+    sources: [ge281_live]
+  - name: "ge_fire-scars-2012_cache"
+    title: "Fire Scars 2012 Cached for 50000 minutes"
+    sources: [ge281_cache]
+  - name: "ge_fmd-100-year-floodplain"
+    title: "FMD 100 year floodplain"
+    sources: [ge70_live]
+  - name: "ge_fmd-100-year-floodplain_cache"
+    title: "FMD 100 year floodplain Cached for 50000 minutes"
+    sources: [ge70_cache]
+  - name: "ge_forest-block-boundaries"
+    title: "Forest Block Boundaries"
+    sources: [ge58_live]
+  - name: "ge_forest-block-boundaries_cache"
+    title: "Forest Block Boundaries Cached for 50000 minutes"
+    sources: [ge58_cache]
+  - name: "ge_forest-ecosystems"
+    title: "Forest Ecosystems"
+    sources: [ge282_live]
+  - name: "ge_forest-ecosystems_cache"
+    title: "Forest Ecosystems Cached for 50000 minutes"
+    sources: [ge282_cache]
+  - name: "ge_fpc-plantations"
+    title: "FPC Plantations"
+    sources: [ge222_live]
+  - name: "ge_fpc-plantations_cache"
+    title: "FPC Plantations Cached for 50000 minutes"
+    sources: [ge222_cache]
+  - name: "ge_fpc-plantations-clearfelled"
+    title: "FPC Plantations - Clearfelled"
+    sources: [ge223_live]
+  - name: "ge_fpc-plantations-clearfelled_cache"
+    title: "FPC Plantations - Clearfelled Cached for 50000 minutes"
+    sources: [ge223_cache]
+  - name: "ge_fuel-age"
+    title: "Fuel Age"
+    sources: [ge247_live]
+  - name: "ge_fuel-age_cache"
+    title: "Fuel Age Cached for 50000 minutes"
+    sources: [ge247_cache]
+  - name: "ge_fuel-age-1-20-years"
+    title: "Fuel Age 1-20 Years"
+    sources: [ge261_live]
+  - name: "ge_fuel-age-1-20-years_cache"
+    title: "Fuel Age 1-20 Years Cached for 50000 minutes"
+    sources: [ge261_cache]
+  - name: "ge_fuel-age-5-year-grouped"
+    title: "Fuel Age 5 year grouped"
+    sources: [ge260_live]
+  - name: "ge_fuel-age-5-year-grouped_cache"
+    title: "Fuel Age 5 year grouped Cached for 50000 minutes"
+    sources: [ge260_cache]
+  - name: "ge_fuel-age-non-forest-regions"
+    title: "Fuel Age Non Forest Regions"
+    sources: [ge235_live]
+  - name: "ge_fuel-age-non-forest-regions_cache"
+    title: "Fuel Age Non Forest Regions Cached for 50000 minutes"
+    sources: [ge235_cache]
+  - name: "ge_LGATE-013"
+    title: "Geographic Names (GEONOMA) (LGATE-013) (01-12-2008 14:54:07)"
+    sources: [ge137_live]
+  - name: "ge_LGATE-013_cache"
+    title: "Geographic Names (GEONOMA) (LGATE-013) (01-12-2008 14:54:07) Cached for 50000 minutes"
+    sources: [ge137_cache]
+  - name: "ge_geomorphic-wetlands-augusta-walpole"
+    title: "Geomorphic Wetlands Augusta to Walpole"
+    sources: [ge59_live]
+  - name: "ge_geomorphic-wetlands-augusta-walpole_cache"
+    title: "Geomorphic Wetlands Augusta to Walpole Cached for 50000 minutes"
+    sources: [ge59_cache]
+  - name: "ge_geomorphic-wetlands-cervantes-eneabba"
+    title: "Geomorphic wetlands Cervantes Eneabba"
+    sources: [ge192_live]
+  - name: "ge_geomorphic-wetlands-cervantes-eneabba_cache"
+    title: "Geomorphic wetlands Cervantes Eneabba Cached for 50000 minutes"
+    sources: [ge192_cache]
+  - name: "ge_geomorphic-wetlands-cervantes-south"
+    title: "Geomorphic Wetlands Cervantes South"
+    sources: [ge60_live]
+  - name: "ge_geomorphic-wetlands-cervantes-south_cache"
+    title: "Geomorphic Wetlands Cervantes South Cached for 50000 minutes"
+    sources: [ge60_cache]
+  - name: "ge_geomorphic-wetlands-darkin-area-d"
+    title: "Geomorphic Wetlands Darkin (Area D)"
+    sources: [ge62_live]
+  - name: "ge_geomorphic-wetlands-darkin-area-d_cache"
+    title: "Geomorphic Wetlands Darkin (Area D) Cached for 50000 minutes"
+    sources: [ge62_cache]
+  - name: "ge_wetlands-scp"
+    title: "Geomorphic wetlands Swan Coastal Plain"
+    sources: [ge5_live]
+  - name: "ge_wetlands-scp_cache"
+    title: "Geomorphic wetlands Swan Coastal Plain Cached for 50000 minutes"
+    sources: [ge5_cache]
+  - name: "ge_geomorphic-wetlands-wheatbelt"
+    title: "Geomorphic Wetlands Wheatbelt"
+    sources: [ge61_live]
+  - name: "ge_geomorphic-wetlands-wheatbelt_cache"
+    title: "Geomorphic Wetlands Wheatbelt Cached for 50000 minutes"
+    sources: [ge61_cache]
+  - name: "ge_gss-ecological-linkages"
+    title: "Gnangara Sustainability Strategy Ecological Linkages"
+    sources: [ge71_live]
+  - name: "ge_gss-ecological-linkages_cache"
+    title: "Gnangara Sustainability Strategy Ecological Linkages Cached for 50000 minutes"
+    sources: [ge71_cache]
+  - name: "ge_gbrs"
+    title: "Greater Bunbury Region Scheme"
+    sources: [ge147_live]
+  - name: "ge_gbrs_cache"
+    title: "Greater Bunbury Region Scheme Cached for 50000 minutes"
+    sources: [ge147_cache]
+  - name: "ge_grfvs-plant-communities"
+    title: "GRFVS Plant Communities"
+    sources: [ge195_live]
+  - name: "ge_grfvs-plant-communities_cache"
+    title: "GRFVS Plant Communities Cached for 50000 minutes"
+    sources: [ge195_cache]
+  - name: "ge_grfvs-vegetation-extent-changes"
+    title: "GRFVS Vegetation Extent Changes"
+    sources: [ge196_live]
+  - name: "ge_grfvs-vegetation-extent-changes_cache"
+    title: "GRFVS Vegetation Extent Changes Cached for 50000 minutes"
+    sources: [ge196_cache]
+  - name: "ge_groundwater-contours-historic-maximum"
+    title: "Groundwater contours historic maximum"
+    sources: [ge72_live]
+  - name: "ge_groundwater-contours-historic-maximum_cache"
+    title: "Groundwater contours historic maximum Cached for 50000 minutes"
+    sources: [ge72_cache]
+  - name: "ge_groundwater-contours-historic-minimum"
+    title: "Groundwater contours historic minimum"
+    sources: [ge73_live]
+  - name: "ge_groundwater-contours-historic-minimum_cache"
+    title: "Groundwater contours historic minimum Cached for 50000 minutes"
+    sources: [ge73_cache]
+  - name: "ge_heddle-vegetation-complexes"
+    title: "Heddle vegetation complexes"
+    sources: [ge74_live]
+  - name: "ge_heddle-vegetation-complexes_cache"
+    title: "Heddle vegetation complexes Cached for 50000 minutes"
+    sources: [ge74_cache]
+  - name: "ge_heritage-commission-sites"
+    title: "Heritage Commission sites"
+    sources: [ge205_live]
+  - name: "ge_heritage-commission-sites_cache"
+    title: "Heritage Commission sites Cached for 50000 minutes"
+    sources: [ge205_cache]
+  - name: "ge_historic-burn-ids"
+    title: "Historic Burn IDs"
+    sources: [ge283_live]
+  - name: "ge_historic-burn-ids_cache"
+    title: "Historic Burn IDs Cached for 50000 minutes"
+    sources: [ge283_cache]
+  - name: "public_Hotspots_by_age"
+    title: "Hotspots by age"
+    sources: [ge139_live]
+  - name: "public_Hotspots_by_age_cache"
+    title: "Hotspots by age Cached for 5 minutes"
+    sources: [ge139_cache]
+  - name: "ge_hydrographic-catchments"
+    title: "Hydrographic catchments"
+    sources: [ge76_live]
+  - name: "ge_hydrographic-catchments_cache"
+    title: "Hydrographic catchments Cached for 50000 minutes"
+    sources: [ge76_cache]
+  - name: "ge_ibra-australia"
+    title: "IBRA Australia"
+    sources: [ge64_live]
+  - name: "ge_ibra-australia_cache"
+    title: "IBRA Australia Cached for 50000 minutes"
+    sources: [ge64_cache]
+  - name: "ge_ibra-wa-subregions"
+    title: "IBRA (WA) Subregions"
+    sources: [ge63_live]
+  - name: "ge_ibra-wa-subregions_cache"
+    title: "IBRA (WA) Subregions Cached for 50000 minutes"
+    sources: [ge63_cache]
+  - name: "ge_important-wetlands"
+    title: "Important wetlands"
+    sources: [ge15_live]
+  - name: "ge_important-wetlands_cache"
+    title: "Important wetlands Cached for 50000 minutes"
+    sources: [ge15_cache]
+  - name: "ge_imcra"
+    title: "Interim Marine and Coastal Regionalisation for Australia (IMCRA)"
+    sources: [ge309_live]
+  - name: "ge_imcra_cache"
+    title: "Interim Marine and Coastal Regionalisation for Australia (IMCRA) Cached for 50000 minutes"
+    sources: [ge309_cache]
+  - name: "ge_jarrah-regeneration"
+    title: "Jarrah Regeneration (0-15 years)"
+    sources: [ge215_live]
+  - name: "ge_jarrah-regeneration_cache"
+    title: "Jarrah Regeneration (0-15 years) Cached for 50000 minutes"
+    sources: [ge215_cache]
+  - name: "ge_karri-occurence"
+    title: "Karri Occurence"
+    sources: [ge284_live]
+  - name: "ge_karri-occurence_cache"
+    title: "Karri Occurence Cached for 50000 minutes"
+    sources: [ge284_cache]
+  - name: "ge_karri-regeneration"
+    title: "Karri Regeneration"
+    sources: [ge217_live]
+  - name: "ge_karri-regeneration_cache"
+    title: "Karri Regeneration Cached for 50000 minutes"
+    sources: [ge217_cache]
+  - name: "ge_land-wildlife"
+    title: "Land for wildlife"
+    sources: [ge310_live]
+  - name: "ge_land-wildlife_cache"
+    title: "Land for wildlife Cached for 50000 minutes"
+    sources: [ge310_cache]
+  - name: "ge_LGATE-071"
+    title: "Landgate Ortho Mosaic Index (LGATE-071) (14-09-2011 17:13:29)"
+    sources: [ge138_live]
+  - name: "ge_LGATE-071_cache"
+    title: "Landgate Ortho Mosaic Index (LGATE-071) (14-09-2011 17:13:29) Cached for 50000 minutes"
+    sources: [ge138_cache]
+  - name: "ge_landscape-conservation-units"
+    title: "Landscape conservation units"
+    sources: [ge206_live]
+  - name: "ge_landscape-conservation-units_cache"
+    title: "Landscape conservation units Cached for 50000 minutes"
+    sources: [ge206_cache]
+  - name: "ge_lga"
+    title: "Local government authorities"
+    sources: [ge29_live]
+  - name: "ge_lga_cache"
+    title: "Local government authorities Cached for 50000 minutes"
+    sources: [ge29_cache]
+  - name: "ge_logging-plan-2013"
+    title: "Logging Plan 2013"
+    sources: [ge285_live]
+  - name: "ge_logging-plan-2013_cache"
+    title: "Logging Plan 2013 Cached for 50000 minutes"
+    sources: [ge285_cache]
+  - name: "ge_mallet-occurance"
+    title: "Mallet Occurence"
+    sources: [ge286_live]
+  - name: "ge_mallet-occurance_cache"
+    title: "Mallet Occurence Cached for 50000 minutes"
+    sources: [ge286_cache]
+  - name: "public_master-burn-plan-au-2011"
+    title: "Master Burn Plan AU 2011"
+    sources: [ge33_live]
+  - name: "public_master-burn-plan-au-2011_cache"
+    title: "Master Burn Plan AU 2011 Cached for 50000 minutes"
+    sources: [ge33_cache]
+  - name: "ge_mattiske-vegetation"
+    title: "Mattiske vegetation"
+    sources: [ge77_live]
+  - name: "ge_mattiske-vegetation_cache"
+    title: "Mattiske vegetation Cached for 50000 minutes"
+    sources: [ge77_cache]
+  - name: "ge_mrs"
+    title: "Metropolitan Region Scheme"
+    sources: [ge78_live]
+  - name: "ge_mrs_cache"
+    title: "Metropolitan Region Scheme Cached for 50000 minutes"
+    sources: [ge78_cache]
+  - name: "ge_DMP-001"
+    title: "Minedex (DMP-001) (16-09-2011 22:35:23)"
+    sources: [ge135_live]
+  - name: "ge_DMP-001_cache"
+    title: "Minedex (DMP-001) (16-09-2011 22:35:23) Cached for 50000 minutes"
+    sources: [ge135_cache]
+  - name: "ge_mining-tenements"
+    title: "Mining Tenements"
+    sources: [ge311_live]
+  - name: "ge_mining-tenements_cache"
+    title: "Mining Tenements Cached for 50000 minutes"
+    sources: [ge311_cache]
+  - name: "public_sentinel-modis-hotspots72"
+    title: "Modis48to72Hours; Modis24to48Hours; Modis12to24Hours; Modis00to12Hours; ModisLastPasses"
+    sources: [ge145_live]
+  - name: "public_sentinel-modis-hotspots72_cache"
+    title: "Modis48to72Hours; Modis24to48Hours; Modis12to24Hours; Modis00to12Hours; ModisLastPasses Cached for 5 minutes"
+    sources: [ge145_cache]
+  - name: "ge_IDY25300000mslp"
+    title: "MSLP | Aust. Region | + 000 hrs | hPa | line | ACCESS | 0.375 deg"
+    sources: [ge100_live]
+  - name: "ge_IDY25300000mslp_cache"
+    title: "MSLP | Aust. Region | + 000 hrs | hPa | line | ACCESS | 0.375 deg Cached for 5 minutes"
+    sources: [ge100_cache]
+  - name: "ge_nlwra-remnant-vegetation-extent"
+    title: "NLWRA remnant vegetation extent"
+    sources: [ge79_live]
+  - name: "ge_nlwra-remnant-vegetation-extent_cache"
+    title: "NLWRA remnant vegetation extent Cached for 50000 minutes"
+    sources: [ge79_cache]
+  - name: "ge_no-planned-burn-areas"
+    title: "No Planned Burn Areas"
+    sources: [ge219_live]
+  - name: "ge_no-planned-burn-areas_cache"
+    title: "No Planned Burn Areas Cached for 50000 minutes"
+    sources: [ge219_cache]
+  - name: "ge_epa-environmental-impact-assessments"
+    title: "OEPA Environmental Impact Assessments"
+    sources: [ge54_live]
+  - name: "ge_epa-environmental-impact-assessments_cache"
+    title: "OEPA Environmental Impact Assessments Cached for 50000 minutes"
+    sources: [ge54_cache]
+  - name: "createivecommons_osmmapnik"
+    title: "OpenStreetMap"
+    sources: [ge11_live]
+  - name: "createivecommons_osmmapnik_cache"
+    title: "OpenStreetMap Cached for 50000 minutes"
+    sources: [ge11_cache]
+  - name: "ge_other-crown-reserves"
+    title: "Other Crown Reserves"
+    sources: [ge220_live]
+  - name: "ge_other-crown-reserves_cache"
+    title: "Other Crown Reserves Cached for 50000 minutes"
+    sources: [ge220_cache]
+  - name: "ge_overhead-transmission-lines"
+    title: "Overhead Transmission Lines"
+    sources: [ge293_live]
+  - name: "ge_overhead-transmission-lines_cache"
+    title: "Overhead Transmission Lines Cached for 50000 minutes"
+    sources: [ge293_cache]
+  - name: "ge_pastoral-lease-dec"
+    title: "Pastoral Lease (former) - DEC Managed Lands"
+    sources: [ge250_live]
+  - name: "ge_pastoral-lease-dec_cache"
+    title: "Pastoral Lease (former) - DEC Managed Lands Cached for 50000 minutes"
+    sources: [ge250_cache]
+  - name: "ge_pastoral-leases"
+    title: "Pastoral Leases"
+    sources: [ge221_live]
+  - name: "ge_pastoral-leases_cache"
+    title: "Pastoral Leases Cached for 50000 minutes"
+    sources: [ge221_cache]
+  - name: "ge_peel-region-scheme"
+    title: "Peel Region Scheme"
+    sources: [ge80_live]
+  - name: "ge_peel-region-scheme_cache"
+    title: "Peel Region Scheme Cached for 50000 minutes"
+    sources: [ge80_cache]
+  - name: "ge_perth-airport-anef"
+    title: "Perth Airport Australian Noise Exposure Forecast"
+    sources: [ge148_live]
+  - name: "ge_perth-airport-anef_cache"
+    title: "Perth Airport Australian Noise Exposure Forecast Cached for 50000 minutes"
+    sources: [ge148_cache]
+  - name: "ge_pipelines"
+    title: "Pipelines"
+    sources: [ge287_live]
+  - name: "ge_pipelines_cache"
+    title: "Pipelines Cached for 50000 minutes"
+    sources: [ge287_cache]
+  - name: "ge_LGATE-028"
+    title: "Points of Interest (LGATE-028)"
+    sources: [ge134_live]
+  - name: "ge_LGATE-028_cache"
+    title: "Points of Interest (LGATE-028) Cached for 600 minutes"
+    sources: [ge134_cache]
+  - name: "public_sentinel-roads"
+    title: "PopulatedPlaces; Locations; Homesteads; LandingGrounds; Roads; RailwayLines; BuiltUpAreas; Reservoirs; Lakes; Rivers; Watercourses"
+    sources: [ge143_live]
+  - name: "public_sentinel-roads_cache"
+    title: "PopulatedPlaces; Locations; Homesteads; LandingGrounds; Roads; RailwayLines; BuiltUpAreas; Reservoirs; Lakes; Rivers; Watercourses Cached for 50000 minutes"
+    sources: [ge143_cache]
+  - name: "ge_pre-european-vegetation"
+    title: "Pre European Vegetation"
+    sources: [ge97_live]
+  - name: "ge_pre-european-vegetation_cache"
+    title: "Pre European Vegetation Cached for 50000 minutes"
+    sources: [ge97_cache]
+  - name: "ge_pbs"
+    title: "Prescribed Burn System proposed burn areas"
+    sources: [ge96_live]
+  - name: "ge_pbs_cache"
+    title: "Prescribed Burn System proposed burn areas Cached for 50000 minutes"
+    sources: [ge96_cache]
+  - name: "ge_private-plantations"
+    title: "Private plantations"
+    sources: [ge251_live]
+  - name: "ge_private-plantations_cache"
+    title: "Private plantations Cached for 50000 minutes"
+    sources: [ge251_cache]
+  - name: "ge_prohibited-burning-periods"
+    title: "Prohibited Burning Periods"
+    sources: [ge288_live]
+  - name: "ge_prohibited-burning-periods_cache"
+    title: "Prohibited Burning Periods Cached for 50000 minutes"
+    sources: [ge288_cache]
+  - name: "ge_prs"
+    title: "PRS locations"
+    sources: [ge37_live]
+  - name: "ge_prs_cache"
+    title: "PRS locations Cached for 50000 minutes"
+    sources: [ge37_cache]
+  - name: "ge_public-drinking-water-protection-zones"
+    title: "Public Drinking Water Protection Zones"
+    sources: [ge289_live]
+  - name: "ge_public-drinking-water-protection-zones_cache"
+    title: "Public Drinking Water Protection Zones Cached for 50000 minutes"
+    sources: [ge289_cache]
+  - name: "ge_IDR31POL"
+    title: "Radar Rain Rate | Albany, WA | point"
+    sources: [ge115_live]
+  - name: "ge_IDR31POL_cache"
+    title: "Radar Rain Rate | Albany, WA | point Cached for 5 minutes"
+    sources: [ge115_cache]
+  - name: "ge_IDR17POL"
+    title: "Radar Rain Rate | Broome, WA | point"
+    sources: [ge113_live]
+  - name: "ge_IDR17POL_cache"
+    title: "Radar Rain Rate | Broome, WA | point Cached for 5 minutes"
+    sources: [ge113_cache]
+  - name: "ge_IDR05POL"
+    title: "Radar Rain Rate | Carnarvon, WA | point"
+    sources: [ge108_live]
+  - name: "ge_IDR05POL_cache"
+    title: "Radar Rain Rate | Carnarvon, WA | point Cached for 5 minutes"
+    sources: [ge108_cache]
+  - name: "ge_IDR15POL"
+    title: "Radar Rain Rate | Dampier, WA | point"
+    sources: [ge111_live]
+  - name: "ge_IDR15POL_cache"
+    title: "Radar Rain Rate | Dampier, WA | point Cached for 5 minutes"
+    sources: [ge111_cache]
+  - name: "ge_IDR32POL"
+    title: "Radar Rain Rate | Esperance, WA | point"
+    sources: [ge118_live]
+  - name: "ge_IDR32POL_cache"
+    title: "Radar Rain Rate | Esperance, WA | point Cached for 5 minutes"
+    sources: [ge118_cache]
+  - name: "ge_IDR45POL"
+    title: "Radar Rain Rate | Eucla, WA | point"
+    sources: [ge119_live]
+  - name: "ge_IDR45POL_cache"
+    title: "Radar Rain Rate | Eucla, WA | point Cached for 5 minutes"
+    sources: [ge119_cache]
+  - name: "ge_IDR06POL"
+    title: "Radar Rain Rate | Geraldton, WA | point"
+    sources: [ge109_live]
+  - name: "ge_IDR06POL_cache"
+    title: "Radar Rain Rate | Geraldton, WA | point Cached for 5 minutes"
+    sources: [ge109_cache]
+  - name: "ge_IDR44POL"
+    title: "Radar Rain Rate | Giles, WA | point"
+    sources: [ge117_live]
+  - name: "ge_IDR44POL_cache"
+    title: "Radar Rain Rate | Giles, WA | point Cached for 5 minutes"
+    sources: [ge117_cache]
+  - name: "ge_IDR39POL"
+    title: "Radar Rain Rate | Halls Creek, WA | point"
+    sources: [ge116_live]
+  - name: "ge_IDR39POL_cache"
+    title: "Radar Rain Rate | Halls Creek, WA | point Cached for 5 minutes"
+    sources: [ge116_cache]
+  - name: "ge_IDR48POL"
+    title: "Radar Rain Rate | Kalgoorlie, WA | point"
+    sources: [ge120_live]
+  - name: "ge_IDR48POL_cache"
+    title: "Radar Rain Rate | Kalgoorlie, WA | point Cached for 5 minutes"
+    sources: [ge120_cache]
+  - name: "ge_IDR29POL"
+    title: "Radar Rain Rate | Learmonth, WA | point"
+    sources: [ge114_live]
+  - name: "ge_IDR29POL_cache"
+    title: "Radar Rain Rate | Learmonth, WA | point Cached for 5 minutes"
+    sources: [ge114_cache]
+  - name: "ge_IDR26POL"
+    title: "Radar Rain Rate | Perth Airport, WA | point"
+    sources: [ge105_live]
+  - name: "ge_IDR26POL_cache"
+    title: "Radar Rain Rate | Perth Airport, WA | point Cached for 5 minutes"
+    sources: [ge105_cache]
+  - name: "ge_IDR70POL"
+    title: "Radar Rain Rate | Perth (Serpentine), WA | point"
+    sources: [ge107_live]
+  - name: "ge_IDR70POL_cache"
+    title: "Radar Rain Rate | Perth (Serpentine), WA | point Cached for 5 minutes"
+    sources: [ge107_cache]
+  - name: "ge_IDR16POL"
+    title: "Radar Rain Rate | Port Hedland, WA | point"
+    sources: [ge112_live]
+  - name: "ge_IDR16POL_cache"
+    title: "Radar Rain Rate | Port Hedland, WA | point Cached for 5 minutes"
+    sources: [ge112_cache]
+  - name: "ge_IDR07POL"
+    title: "Radar Rain Rate | Wyndham, WA | point"
+    sources: [ge110_live]
+  - name: "ge_IDR07POL_cache"
+    title: "Radar Rain Rate | Wyndham, WA | point Cached for 5 minutes"
+    sources: [ge110_cache]
+  - name: "ge_railways"
+    title: "Railways"
+    sources: [ge81_live]
+  - name: "ge_railways_cache"
+    title: "Railways Cached for 50000 minutes"
+    sources: [ge81_cache]
+  - name: "ge_ramsar"
+    title: "RAMSAR wetlands"
+    sources: [ge9_live]
+  - name: "ge_ramsar_cache"
+    title: "RAMSAR wetlands Cached for 50000 minutes"
+    sources: [ge9_cache]
+  - name: "ge_ratis-heritage-sites"
+    title: "RATIS Heritage Sites"
+    sources: [ge204_live]
+  - name: "ge_ratis-heritage-sites_cache"
+    title: "RATIS Heritage Sites Cached for 50000 minutes"
+    sources: [ge204_cache]
+  - name: "public_regional-parks"
+    title: "Regional Parks"
+    sources: [ge17_live]
+  - name: "public_regional-parks_cache"
+    title: "Regional Parks Cached for 50000 minutes"
+    sources: [ge17_cache]
+  - name: "ge_register-national-estate"
+    title: "Register of National Estate"
+    sources: [ge82_live]
+  - name: "ge_register-national-estate_cache"
+    title: "Register of National Estate Cached for 50000 minutes"
+    sources: [ge82_cache]
+  - name: "ge_remnant-vegetation"
+    title: "Remnant Vegetation"
+    sources: [ge225_live]
+  - name: "ge_remnant-vegetation_cache"
+    title: "Remnant Vegetation Cached for 50000 minutes"
+    sources: [ge225_cache]
+  - name: "ge_resource-tracking"
+    title: "Resource Tracking"
+    sources: [ge184_live]
+  - name: "ge_resource-tracking_cache"
+    title: "Resource Tracking Cached for 0 minutes"
+    sources: [ge184_cache]
+  - name: "ge_rivers"
+    title: "Rivers"
+    sources: [ge83_live]
+  - name: "ge_rivers_cache"
+    title: "Rivers Cached for 50000 minutes"
+    sources: [ge83_cache]
+  - name: "ge_road-centrelines"
+    title: "Road centrelines"
+    sources: [ge39_live]
+  - name: "ge_road-centrelines_cache"
+    title: "Road centrelines Cached for 50000 minutes"
+    sources: [ge39_cache]
+  - name: "ge_LGATE-073"
+    title: "Roads (Processed) (LGATE-073) (25-11-2009 16:53:13)"
+    sources: [ge136_live]
+  - name: "ge_LGATE-073_cache"
+    title: "Roads (Processed) (LGATE-073) (25-11-2009 16:53:13) Cached for 50000 minutes"
+    sources: [ge136_cache]
+  - name: "ge_IDE10012"
+    title: "Satellite IR | Aust. Region | MTSAT-1R"
+    sources: [ge124_live]
+  - name: "ge_IDE10012_cache"
+    title: "Satellite IR | Aust. Region | MTSAT-1R Cached for 5 minutes"
+    sources: [ge124_cache]
+  - name: "ge_scientific-study-sites"
+    title: "Scientific Study Sites"
+    sources: [ge201_live]
+  - name: "ge_scientific-study-sites_cache"
+    title: "Scientific Study Sites Cached for 50000 minutes"
+    sources: [ge201_cache]
+  - name: "ge_specified-management-regime"
+    title: "Specified Management Regime"
+    sources: [ge290_live]
+  - name: "ge_specified-management-regime_cache"
+    title: "Specified Management Regime Cached for 50000 minutes"
+    sources: [ge290_cache]
+  - name: "ge_FESA-017"
+    title: "State Emergency Service Stations (FESA-017)"
+    sources: [ge129_live]
+  - name: "ge_FESA-017_cache"
+    title: "State Emergency Service Stations (FESA-017) Cached for 600 minutes"
+    sources: [ge129_cache]
+  - name: "public_suburbs"
+    title: "Suburbs"
+    sources: [ge30_live]
+  - name: "public_suburbs_cache"
+    title: "Suburbs Cached for 50000 minutes"
+    sources: [ge30_cache]
+  - name: "ge_IDY03103_dwpt"
+    title: "Surface Obs, Dewpoint Temperature | Australia | deg C"
+    sources: [ge104_live]
+  - name: "ge_IDY03103_dwpt_cache"
+    title: "Surface Obs, Dewpoint Temperature | Australia | deg C Cached for 5 minutes"
+    sources: [ge104_cache]
+  - name: "ge_IDY03103_dryblb"
+    title: "Surface Obs, Drybulb Temperature | Australia | deg C"
+    sources: [ge121_live]
+  - name: "ge_IDY03103_dryblb_cache"
+    title: "Surface Obs, Drybulb Temperature | Australia | deg C Cached for 5 minutes"
+    sources: [ge121_cache]
+  - name: "ge_IDY03103_rain9am"
+    title: "Surface Obs, Rain since 9am | Australia | mm"
+    sources: [ge106_live]
+  - name: "ge_IDY03103_rain9am_cache"
+    title: "Surface Obs, Rain since 9am | Australia | mm Cached for 5 minutes"
+    sources: [ge106_cache]
+  - name: "ge_IDY03103_rh"
+    title: "Surface Obs, Relative Humidity | Australia | %"
+    sources: [ge122_live]
+  - name: "ge_IDY03103_rh_cache"
+    title: "Surface Obs, Relative Humidity | Australia | % Cached for 5 minutes"
+    sources: [ge122_cache]
+  - name: "ge_IDY03103_time_utc"
+    title: "Surface Obs, Time (UTC) | Australia"
+    sources: [ge103_live]
+  - name: "ge_IDY03103_time_utc_cache"
+    title: "Surface Obs, Time (UTC) | Australia Cached for 5 minutes"
+    sources: [ge103_cache]
+  - name: "ge_IDY03103_wind"
+    title: "Surface Obs, Wind | Australia | knots, degN"
+    sources: [ge123_live]
+  - name: "ge_IDY03103_wind_cache"
+    title: "Surface Obs, Wind | Australia | knots, degN Cached for 5 minutes"
+    sources: [ge123_cache]
+  - name: "ge_swan-bioplan-peel"
+    title: "Swan Bioplan Peel"
+    sources: [ge89_live]
+  - name: "ge_swan-bioplan-peel_cache"
+    title: "Swan Bioplan Peel Cached for 50000 minutes"
+    sources: [ge89_cache]
+  - name: "ge_srt-act-management-area"
+    title: "Swan River Trust Act management area"
+    sources: [ge84_live]
+  - name: "ge_srt-act-management-area_cache"
+    title: "Swan River Trust Act management area Cached for 50000 minutes"
+    sources: [ge84_cache]
+  - name: "ge_tec-sites-buffered"
+    title: "TEC sites buffered"
+    sources: [ge36_live]
+  - name: "ge_tec-sites-buffered_cache"
+    title: "TEC sites buffered Cached for 50000 minutes"
+    sources: [ge36_cache]
+  - name: "ge_temporary-fire-exclusion-habitat"
+    title: "Temporary Fire Exclusion Habitat"
+    sources: [ge292_live]
+  - name: "ge_temporary-fire-exclusion-habitat_cache"
+    title: "Temporary Fire Exclusion Habitat Cached for 50000 minutes"
+    sources: [ge292_cache]
+  - name: "ge_test"
+    title: "Test"
+    sources: [ge187_live]
+  - name: "ge_test_cache"
+    title: "Test Cached for 50000 minutes"
+    sources: [ge187_cache]
+  - name: "ge_test-eia"
+    title: "test EIA"
+    sources: [ge194_live]
+  - name: "ge_test-eia_cache"
+    title: "test EIA Cached for 50000 minutes"
+    sources: [ge194_cache]
+  - name: "ge_tpfl"
+    title: "Threatened and Priority Flora list"
+    sources: [ge48_live]
+  - name: "ge_tpfl_cache"
+    title: "Threatened and Priority Flora list Cached for 50000 minutes"
+    sources: [ge48_cache]
+  - name: "ge_threatened-fauna"
+    title: "Threatened Fauna"
+    sources: [ge98_live]
+  - name: "ge_threatened-fauna_cache"
+    title: "Threatened Fauna Cached for 50000 minutes"
+    sources: [ge98_cache]
+  - name: "ge_timber-harvest-plan"
+    title: "Timber Harvest Plan"
+    sources: [ge252_live]
+  - name: "ge_timber-harvest-plan_cache"
+    title: "Timber Harvest Plan Cached for 50000 minutes"
+    sources: [ge252_cache]
+  - name: "ge_firewatch-lightning-today"
+    title: "Today"
+    sources: [ge140_live]
+  - name: "ge_firewatch-lightning-today_cache"
+    title: "Today Cached for 5 minutes"
+    sources: [ge140_cache]
+  - name: "ge_town-planning-scheme-zones"
+    title: "Town Planning Scheme zones"
+    sources: [ge87_live]
+  - name: "ge_town-planning-scheme-zones_cache"
+    title: "Town Planning Scheme zones Cached for 50000 minutes"
+    sources: [ge87_cache]
+  - name: "ge_tracplus"
+    title: "TracPLUS"
+    sources: [ge308_live]
+  - name: "ge_tracplus_cache"
+    title: "TracPLUS Cached for 50000 minutes"
+    sources: [ge308_cache]
+  - name: "ge_trails"
+    title: "Trails"
+    sources: [ge229_live]
+  - name: "ge_trails_cache"
+    title: "Trails Cached for 50000 minutes"
+    sources: [ge229_cache]
+  - name: "ge_tuart-woodlands"
+    title: "Tuart Woodlands"
+    sources: [ge295_live]
+  - name: "ge_tuart-woodlands_cache"
+    title: "Tuart Woodlands Cached for 50000 minutes"
+    sources: [ge295_cache]
+  - name: "ge_ucl"
+    title: "Unallocated crown land"
+    sources: [ge38_live]
+  - name: "ge_ucl_cache"
+    title: "Unallocated crown land Cached for 50000 minutes"
+    sources: [ge38_cache]
+  - name: "ge_unexploded-ordnances"
+    title: "Unexploded ordnances"
+    sources: [ge253_live]
+  - name: "ge_unexploded-ordnances_cache"
+    title: "Unexploded ordnances Cached for 50000 minutes"
+    sources: [ge253_cache]
+  - name: "ge_unmanaged-reserves"
+    title: "Unmanaged Reserves"
+    sources: [ge68_live]
+  - name: "ge_unmanaged-reserves_cache"
+    title: "Unmanaged Reserves Cached for 50000 minutes"
+    sources: [ge68_cache]
+  - name: "ge_vegetation-system-boundaries"
+    title: "Vegetation system boundaries"
+    sources: [ge191_live]
+  - name: "ge_vegetation-system-boundaries_cache"
+    title: "Vegetation system boundaries Cached for 50000 minutes"
+    sources: [ge191_cache]
+  - name: "ge_vine-growing-fruits"
+    title: "Vine Growing Fruits"
+    sources: [ge296_live]
+  - name: "ge_vine-growing-fruits_cache"
+    title: "Vine Growing Fruits Cached for 50000 minutes"
+    sources: [ge296_cache]
+  - name: "ge_FESA-018"
+    title: "Volunteer Emergency Services Stations (FESA-018)"
+    sources: [ge128_live]
+  - name: "ge_FESA-018_cache"
+    title: "Volunteer Emergency Services Stations (FESA-018) Cached for 600 minutes"
+    sources: [ge128_cache]
+  - name: "ge_FESA-021"
+    title: "Volunteer Fire Service Stations (FESA-021)"
+    sources: [ge125_live]
+  - name: "ge_FESA-021_cache"
+    title: "Volunteer Fire Service Stations (FESA-021) Cached for 600 minutes"
+    sources: [ge125_cache]
+  - name: "ge_FESA-019"
+    title: "Volunteer Marine Rescue Stations (FESA-019)"
+    sources: [ge127_live]
+  - name: "ge_FESA-019_cache"
+    title: "Volunteer Marine Rescue Stations (FESA-019) Cached for 600 minutes"
+    sources: [ge127_cache]
+  - name: "ge_wa-automatic-weather-stations"
+    title: "WA Automatic Weather Stations"
+    sources: [ge300_live]
+  - name: "ge_wa-automatic-weather-stations_cache"
+    title: "WA Automatic Weather Stations Cached for 50000 minutes"
+    sources: [ge300_cache]
+  - name: "public_coastline"
+    title: "WA Coastline"
+    sources: [ge28_live]
+  - name: "public_coastline_cache"
+    title: "WA Coastline Cached for 50000 minutes"
+    sources: [ge28_cache]
+  - name: "ge_wandoo-occurrence"
+    title: "Wandoo Occurrence"
+    sources: [ge297_live]
+  - name: "ge_wandoo-occurrence_cache"
+    title: "Wandoo Occurrence Cached for 50000 minutes"
+    sources: [ge297_cache]
+  - name: "ge_wapc-section-16-managed-lands"
+    title: "WA Planning Commission Section 16 Managed Lands"
+    sources: [ge233_live]
+  - name: "ge_wapc-section-16-managed-lands_cache"
+    title: "WA Planning Commission Section 16 Managed Lands Cached for 50000 minutes"
+    sources: [ge233_cache]
+  - name: "ge_wa-townsite-boundaries"
+    title: "WA Townsite Boundaries"
+    sources: [ge307_live]
+  - name: "ge_wa-townsite-boundaries_cache"
+    title: "WA Townsite Boundaries Cached for 50000 minutes"
+    sources: [ge307_cache]
+  - name: "ge_wa-townsites"
+    title: "WA Townsites"
+    sources: [ge291_live]
+  - name: "ge_wa-townsites_cache"
+    title: "WA Townsites Cached for 50000 minutes"
+    sources: [ge291_cache]
+  - name: "ge_western-ringtail-possum-area"
+    title: "Western Ringtail Possum area"
+    sources: [ge85_live]
+  - name: "ge_western-ringtail-possum-area_cache"
+    title: "Western Ringtail Possum area Cached for 50000 minutes"
+    sources: [ge85_cache]
+  - name: "ge_wild-rivers"
+    title: "Wild rivers"
+    sources: [ge86_live]
+  - name: "ge_wild-rivers_cache"
+    title: "Wild rivers Cached for 50000 minutes"
+    sources: [ge86_cache]
+  - name: "ge_IDY25300000wind_pt"
+    title: "Winds (10m) | Aust. Region | + 000 hrs | knots,degN | point | ACCESS | 0.375 deg"
+    sources: [ge102_live]
+  - name: "ge_IDY25300000wind_pt_cache"
+    title: "Winds (10m) | Aust. Region | + 000 hrs | knots,degN | point | ACCESS | 0.375 deg Cached for 5 minutes"
+    sources: [ge102_cache]
+  - name: "ge_IDY25300000wind_rast"
+    title: "Winds (10m) | Aust. Region | + 000 hrs | knots | raster | ACCESS | 0.375 deg"
+    sources: [ge101_live]
+  - name: "ge_IDY25300000wind_rast_cache"
+    title: "Winds (10m) | Aust. Region | + 000 hrs | knots | raster | ACCESS | 0.375 deg Cached for 5 minutes"
+    sources: [ge101_cache]
+  - name: "public_firewatch-lightning-yesterday"
+    title: "Yesterday"
+    sources: [ge141_live]
+  - name: "public_firewatch-lightning-yesterday_cache"
+    title: "Yesterday Cached for 5 minutes"
+    sources: [ge141_cache]
+    
+caches:
+  ge34_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge34]
+  ge34_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge34]
+  ge214_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge214]
+  ge214_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge214]
+  ge40_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge40]
+  ge40_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge40]
+  ge26_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge26]
+  ge26_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge26]
+  ge171_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge171]
+  ge171_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge171]
+  ge172_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge172]
+  ge172_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge172]
+  ge173_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge173]
+  ge173_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge173]
+  ge174_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge174]
+  ge174_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge174]
+  ge175_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge175]
+  ge175_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge175]
+  ge176_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge176]
+  ge176_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge176]
+  ge162_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge162]
+  ge162_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge162]
+  ge10_live:
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge10]
+  ge10_cache:
+    link_single_color_images: true
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge10]
+  ge152_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge152]
+  ge152_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge152]
+  ge95_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge95]
+  ge95_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge95]
+  ge144_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge144]
+  ge144_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge144]
+  ge99_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge99]
+  ge99_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge99]
+  ge202_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge202]
+  ge202_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge202]
+  ge131_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge131]
+  ge131_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge131]
+  ge41_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge41]
+  ge41_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge41]
+  ge7_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge7]
+  ge7_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge7]
+  ge133_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge133]
+  ge133_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge133]
+  ge197_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge197]
+  ge197_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge197]
+  ge198_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge198]
+  ge198_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge198]
+  ge200_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge200]
+  ge200_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge200]
+  ge150_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge150]
+  ge150_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge150]
+  ge156_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge156]
+  ge156_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge156]
+  ge43_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge43]
+  ge43_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge43]
+  ge161_live:
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge161]
+  ge161_cache:
+    link_single_color_images: true
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge161]
+  ge301_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge301]
+  ge301_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge301]
+  ge302_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge302]
+  ge302_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge302]
+  ge303_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge303]
+  ge303_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge303]
+  ge304_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge304]
+  ge304_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge304]
+  ge44_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge44]
+  ge44_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge44]
+  ge153_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge153]
+  ge153_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge153]
+  ge132_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge132]
+  ge132_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge132]
+  ge46_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge46]
+  ge46_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge46]
+  ge90_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge90]
+  ge90_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge90]
+  ge142_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge142]
+  ge142_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge142]
+  ge249_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge249]
+  ge249_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge249]
+  ge243_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge243]
+  ge243_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge243]
+  ge160_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge160]
+  ge160_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge160]
+  ge19_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge19]
+  ge19_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge19]
+  ge305_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge305]
+  ge305_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge305]
+  ge255_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge255]
+  ge255_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge255]
+  ge244_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge244]
+  ge244_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge244]
+  ge226_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge226]
+  ge226_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge226]
+  ge259_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge259]
+  ge259_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge259]
+  ge18_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge18]
+  ge18_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge18]
+  ge16_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge16]
+  ge16_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge16]
+  ge49_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge49]
+  ge49_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge49]
+  ge50_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge50]
+  ge50_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge50]
+  ge238_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge238]
+  ge238_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge238]
+  ge256_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge256]
+  ge256_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge256]
+  ge257_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge257]
+  ge257_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge257]
+  ge239_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge239]
+  ge239_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge239]
+  ge146_live:
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge146]
+  ge146_cache:
+    link_single_color_images: true
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge146]
+  ge56_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge56]
+  ge56_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge56]
+  ge69_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge69]
+  ge69_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge69]
+  ge55_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge55]
+  ge55_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge55]
+  ge66_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge66]
+  ge66_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge66]
+  ge67_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge67]
+  ge67_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge67]
+  ge57_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge57]
+  ge57_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge57]
+  ge258_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge258]
+  ge258_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge258]
+  ge234_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge234]
+  ge234_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge234]
+  ge240_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge240]
+  ge240_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge240]
+  ge130_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge130]
+  ge130_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge130]
+  ge241_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge241]
+  ge241_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge241]
+  ge126_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge126]
+  ge126_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge126]
+  ge164_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge164]
+  ge164_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge164]
+  ge165_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge165]
+  ge165_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge165]
+  ge242_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge242]
+  ge242_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge242]
+  ge299_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge299]
+  ge299_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge299]
+  ge166_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge166]
+  ge166_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge166]
+  ge167_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge167]
+  ge167_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge167]
+  ge262_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge262]
+  ge262_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge262]
+  ge263_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge263]
+  ge263_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge263]
+  ge264_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge264]
+  ge264_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge264]
+  ge265_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge265]
+  ge265_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge265]
+  ge266_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge266]
+  ge266_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge266]
+  ge267_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge267]
+  ge267_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge267]
+  ge268_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge268]
+  ge268_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge268]
+  ge269_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge269]
+  ge269_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge269]
+  ge270_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge270]
+  ge270_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge270]
+  ge271_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge271]
+  ge271_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge271]
+  ge272_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge272]
+  ge272_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge272]
+  ge273_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge273]
+  ge273_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge273]
+  ge274_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge274]
+  ge274_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge274]
+  ge275_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge275]
+  ge275_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge275]
+  ge276_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge276]
+  ge276_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge276]
+  ge277_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge277]
+  ge277_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge277]
+  ge278_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge278]
+  ge278_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge278]
+  ge279_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge279]
+  ge279_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge279]
+  ge280_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge280]
+  ge280_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge280]
+  ge281_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge281]
+  ge281_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge281]
+  ge70_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge70]
+  ge70_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge70]
+  ge58_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge58]
+  ge58_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge58]
+  ge282_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge282]
+  ge282_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge282]
+  ge222_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge222]
+  ge222_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge222]
+  ge223_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge223]
+  ge223_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge223]
+  ge247_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge247]
+  ge247_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge247]
+  ge261_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge261]
+  ge261_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge261]
+  ge260_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge260]
+  ge260_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge260]
+  ge235_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge235]
+  ge235_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge235]
+  ge137_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge137]
+  ge137_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge137]
+  ge59_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge59]
+  ge59_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge59]
+  ge192_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge192]
+  ge192_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge192]
+  ge60_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge60]
+  ge60_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge60]
+  ge62_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge62]
+  ge62_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge62]
+  ge5_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge5]
+  ge5_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge5]
+  ge61_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge61]
+  ge61_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge61]
+  ge71_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge71]
+  ge71_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge71]
+  ge147_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge147]
+  ge147_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge147]
+  ge195_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge195]
+  ge195_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge195]
+  ge196_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge196]
+  ge196_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge196]
+  ge72_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge72]
+  ge72_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge72]
+  ge73_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge73]
+  ge73_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge73]
+  ge74_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge74]
+  ge74_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge74]
+  ge205_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge205]
+  ge205_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge205]
+  ge283_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge283]
+  ge283_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge283]
+  ge139_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge139]
+  ge139_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge139]
+  ge76_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge76]
+  ge76_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge76]
+  ge64_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge64]
+  ge64_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge64]
+  ge63_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge63]
+  ge63_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge63]
+  ge15_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge15]
+  ge15_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge15]
+  ge309_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge309]
+  ge309_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge309]
+  ge215_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge215]
+  ge215_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge215]
+  ge284_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge284]
+  ge284_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge284]
+  ge217_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge217]
+  ge217_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge217]
+  ge310_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge310]
+  ge310_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge310]
+  ge138_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge138]
+  ge138_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge138]
+  ge206_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge206]
+  ge206_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge206]
+  ge29_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge29]
+  ge29_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge29]
+  ge285_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge285]
+  ge285_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge285]
+  ge286_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge286]
+  ge286_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge286]
+  ge33_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge33]
+  ge33_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge33]
+  ge77_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge77]
+  ge77_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge77]
+  ge78_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge78]
+  ge78_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge78]
+  ge135_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge135]
+  ge135_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge135]
+  ge311_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge311]
+  ge311_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge311]
+  ge145_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge145]
+  ge145_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge145]
+  ge100_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge100]
+  ge100_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge100]
+  ge79_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge79]
+  ge79_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge79]
+  ge219_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge219]
+  ge219_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge219]
+  ge54_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge54]
+  ge54_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge54]
+  ge11_live:
+    format: image/jpeg
+    grids: [sphericalmercator]
+    sources: [ge11]
+  ge11_cache:
+    link_single_color_images: true
+    format: image/jpeg
+    grids: [sphericalmercator]
+    sources: [ge11]
+  ge220_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge220]
+  ge220_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge220]
+  ge293_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge293]
+  ge293_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge293]
+  ge250_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge250]
+  ge250_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge250]
+  ge221_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge221]
+  ge221_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge221]
+  ge80_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge80]
+  ge80_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge80]
+  ge148_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge148]
+  ge148_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge148]
+  ge287_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge287]
+  ge287_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge287]
+  ge134_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge134]
+  ge134_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge134]
+  ge143_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge143]
+  ge143_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge143]
+  ge97_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge97]
+  ge97_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge97]
+  ge96_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge96]
+  ge96_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge96]
+  ge251_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge251]
+  ge251_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge251]
+  ge288_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge288]
+  ge288_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge288]
+  ge37_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge37]
+  ge37_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge37]
+  ge289_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge289]
+  ge289_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge289]
+  ge115_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge115]
+  ge115_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge115]
+  ge113_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge113]
+  ge113_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge113]
+  ge108_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge108]
+  ge108_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge108]
+  ge111_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge111]
+  ge111_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge111]
+  ge118_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge118]
+  ge118_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge118]
+  ge119_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge119]
+  ge119_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge119]
+  ge109_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge109]
+  ge109_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge109]
+  ge117_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge117]
+  ge117_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge117]
+  ge116_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge116]
+  ge116_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge116]
+  ge120_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge120]
+  ge120_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge120]
+  ge114_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge114]
+  ge114_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge114]
+  ge105_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge105]
+  ge105_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge105]
+  ge107_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge107]
+  ge107_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge107]
+  ge112_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge112]
+  ge112_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge112]
+  ge110_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge110]
+  ge110_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge110]
+  ge81_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge81]
+  ge81_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge81]
+  ge9_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge9]
+  ge9_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge9]
+  ge204_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge204]
+  ge204_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge204]
+  ge17_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge17]
+  ge17_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge17]
+  ge82_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge82]
+  ge82_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge82]
+  ge225_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge225]
+  ge225_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge225]
+  ge184_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge184]
+  ge184_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge184]
+  ge83_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge83]
+  ge83_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge83]
+  ge39_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge39]
+  ge39_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge39]
+  ge136_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge136]
+  ge136_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge136]
+  ge124_live:
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge124]
+  ge124_cache:
+    link_single_color_images: true
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge124]
+  ge201_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge201]
+  ge201_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge201]
+  ge290_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge290]
+  ge290_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge290]
+  ge129_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge129]
+  ge129_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge129]
+  ge30_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge30]
+  ge30_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge30]
+  ge104_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge104]
+  ge104_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge104]
+  ge121_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge121]
+  ge121_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge121]
+  ge106_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge106]
+  ge106_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge106]
+  ge122_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge122]
+  ge122_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge122]
+  ge103_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge103]
+  ge103_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge103]
+  ge123_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge123]
+  ge123_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge123]
+  ge89_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge89]
+  ge89_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge89]
+  ge84_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge84]
+  ge84_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge84]
+  ge36_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge36]
+  ge36_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge36]
+  ge292_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge292]
+  ge292_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge292]
+  ge187_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge187]
+  ge187_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge187]
+  ge194_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge194]
+  ge194_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge194]
+  ge48_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge48]
+  ge48_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge48]
+  ge98_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge98]
+  ge98_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge98]
+  ge252_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge252]
+  ge252_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge252]
+  ge140_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge140]
+  ge140_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge140]
+  ge87_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge87]
+  ge87_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge87]
+  ge308_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge308]
+  ge308_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge308]
+  ge229_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge229]
+  ge229_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge229]
+  ge295_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge295]
+  ge295_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge295]
+  ge38_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge38]
+  ge38_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge38]
+  ge253_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge253]
+  ge253_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge253]
+  ge68_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge68]
+  ge68_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge68]
+  ge191_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge191]
+  ge191_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge191]
+  ge296_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge296]
+  ge296_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge296]
+  ge128_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge128]
+  ge128_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge128]
+  ge125_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge125]
+  ge125_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge125]
+  ge127_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge127]
+  ge127_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge127]
+  ge300_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge300]
+  ge300_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge300]
+  ge28_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge28]
+  ge28_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge28]
+  ge297_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge297]
+  ge297_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge297]
+  ge233_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge233]
+  ge233_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge233]
+  ge307_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge307]
+  ge307_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge307]
+  ge291_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge291]
+  ge291_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge291]
+  ge85_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge85]
+  ge85_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge85]
+  ge86_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge86]
+  ge86_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge86]
+  ge102_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge102]
+  ge102_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge102]
+  ge101_live:
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge101]
+  ge101_cache:
+    link_single_color_images: true
+    format: image/jpeg
+    grids: [wgs84]
+    sources: [ge101]
+  ge141_live:
+    format: image/png
+    grids: [wgs84]
+    sources: [ge141]
+  ge141_cache:
+    link_single_color_images: true
+    format: image/png
+    grids: [wgs84]
+    sources: [ge141]
+
+sources:
+  ge162:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsR008?"
+      layers: "DEC-043"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge10:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsCsMosaic?"
+      layers: "LGATE-V001"
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge144:
+    type: wms
+    req:
+      url: "http://sentinel.ga.gov.au/wmsconnector/com.esri.wms.Esrimap?"
+      layers: "1404,1403,1402,1401,1400"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge99:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDM00007"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge131:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-011"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge133:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "LGATE-001,LGATE-002"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge161:
+    type: wms
+    req:
+      url: "http://10.0.2.32/cgi-bin/mapserv?map=/var/imagery/gda94.map&"
+      layers: "cog"
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge132:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "LGATE-015"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge142:
+    type: wms
+    req:
+      url: "http://srss-mapserver.dli.wa.gov.au/firewatch.asp?"
+      layers: "Day_before_Yesterday"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge146:
+    type: wms
+    req:
+      url: "http://10.0.2.32/cgi-bin/mapserv?map=/var/imagery/gda94.map&"
+      layers: "esd-2008"
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge130:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-014"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge126:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-020"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge137:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmspublic?"
+      layers: "LGATE-013"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge139:
+    type: wms
+    req:
+      url: "http://srss-mapserver.dli.wa.gov.au/firewatch.asp?"
+      layers: "Hotspots_by_age"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge138:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmspublic?"
+      layers: "LGATE-071"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge135:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmspublic?"
+      layers: "DMP-001"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge145:
+    type: wms
+    req:
+      url: "http://sentinel.ga.gov.au/wmsconnector/com.esri.wms.Esrimap?"
+      layers: "1604,1603,1602,1601,1600"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge100:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY25300000mslp"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge134:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "LGATE-028"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge143:
+    type: wms
+    req:
+      url: "http://sentinel.ga.gov.au/wmsconnector/com.esri.wms.Esrimap?"
+      layers: "1173,1172,1171,1170,1141,1140,1103,1104,1102,1100,1101"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge115:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR31POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge113:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR17POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge108:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR05POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge111:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR15POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge118:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR32POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge119:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR45POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge109:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR06POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge117:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR44POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge116:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR39POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge120:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR48POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge114:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR29POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge105:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR26POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge107:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR70POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge112:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR16POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge110:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDR07POL"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge136:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmspublic?"
+      layers: "LGATE-073"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge124:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDE10012"
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge129:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-017"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge104:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY03103_dwpt"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge121:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY03103_dryblb"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge106:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY03103_rain9am"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge122:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY03103_rh"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge103:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY03103_time_utc"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge123:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY03103_wind"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge140:
+    type: wms
+    req:
+      url: "http://srss-mapserver.dli.wa.gov.au/firewatch.asp?"
+      layers: "Today"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge128:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-018"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge125:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-021"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge127:
+    type: wms
+    req:
+      url: "https://www2.landgate.wa.gov.au/ows/wmsem?"
+      layers: "FESA-019"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic ZGVjZmlyZTpFcmlmbWxhYzE="
+  ge102:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY25300000wind_pt"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge101:
+    type: wms
+    req:
+      url: "http://reg.bom.gov.au/cgi-bin/reg/ws/gis/users/bomw0505/wxs?"
+      layers: "IDY25300000wind_rast"
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+    http:
+      headers:
+        Authorization: "Basic Ym9tdzA1MDU6MjZzZU1iTWU="
+  ge141:
+    type: wms
+    req:
+      url: "http://srss-mapserver.dli.wa.gov.au/firewatch.asp?"
+      layers: "Yesterday"
+      transparent: true
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge34:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge34"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge214:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge214"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge40:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge40"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge26:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge26"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge171:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge171"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge172:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge172"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge173:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge173"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge174:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge174"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge175:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge175"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge176:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge176"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge152:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge152"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge95:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge95"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge202:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge202"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge41:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge41"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge7:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge7"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge197:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge197"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge198:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge198"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge200:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge200"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge150:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge150"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge156:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge156"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge43:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge43"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge301:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge301"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge302:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge302"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge303:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge303"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge304:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge304"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge44:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge44"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge153:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge153"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge46:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge46"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge90:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge90"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge249:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge249"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge243:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge243"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge160:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge160"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge19:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge19"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge305:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge305"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge255:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge255"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge244:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge244"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge226:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge226"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge259:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge259"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge18:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge18"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge16:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge16"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge49:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge49"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge50:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge50"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge238:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge238"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge256:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge256"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge257:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge257"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge239:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge239"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge56:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge56"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge69:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge69"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge55:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge55"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge66:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge66"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge67:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge67"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge57:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge57"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge258:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge258"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge234:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge234"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge240:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge240"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge241:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge241"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge164:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge20:ge164"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge165:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge20:ge165"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge242:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge242"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge299:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge299"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge166:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge20:ge166"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge167:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge20:ge167"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge262:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge262"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge263:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge263"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge264:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge264"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge265:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge265"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge266:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge266"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge267:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge267"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge268:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge268"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge269:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge269"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge270:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge270"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge271:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge271"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge272:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge272"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge273:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge273"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge274:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge274"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge275:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge275"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge276:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge276"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge277:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge277"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge278:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge278"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge279:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge279"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge280:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge280"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge281:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge281"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge70:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge70"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge58:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge58"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge282:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge282"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge222:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge222"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge223:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge223"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge247:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge247"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge261:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge261"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge260:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge260"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge235:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge235"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge59:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge59"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge192:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge192"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge60:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge60"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge62:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge62"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge5:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge5"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge61:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge61"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge71:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge71"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge147:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge147"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge195:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge195"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge196:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge196"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge72:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge72"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge73:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge73"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge74:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge74"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge205:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge205"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge283:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge283"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge76:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge76"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge64:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge64"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge63:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge63"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge15:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge15"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge309:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge309"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge215:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge215"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge284:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge284"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge217:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge217"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge310:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge310"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge206:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge206"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge29:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge29"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge285:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge285"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge286:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge286"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge33:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge33"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge77:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge77"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge78:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge78"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge311:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge311"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge79:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge79"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge219:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge219"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge54:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge54"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge220:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge220"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge293:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge293"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge250:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge250"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge221:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge221"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge80:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge80"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge148:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge148"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge287:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge287"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge97:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge97"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge96:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge96"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge251:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge251"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge288:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge288"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge37:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge37"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge289:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge289"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge81:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge81"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge9:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge9"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge204:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge204"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge17:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge17"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge82:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge82"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge225:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge225"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge184:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge184"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge83:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge83"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge39:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge39"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge201:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge201"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge290:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge290"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge30:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge30"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge89:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge89"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge84:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge84"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge36:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge36"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge292:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge292"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge187:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge187"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge194:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge194"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge48:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge48"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge98:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge98"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge252:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge252"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge87:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge87"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge308:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge308"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge229:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge229"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge295:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge295"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge38:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge38"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge253:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge253"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge68:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge68"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge191:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge191"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge296:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge296"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge300:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge300"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge28:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge15:ge28"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge297:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge297"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge233:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge233"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge307:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge307"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge291:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge291"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge85:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge85"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge86:
+    type: wms
+    req:
+      url: "http://kens-apache-001-prod.corporateict.domain:8080/geoserver/wms?"
+      layers: "ge12:ge86"
+      transparent: true
+      maxFeatures: 100000
+    wms_opts:
+      legendgraphic: true
+      featureinfo: true
+  ge11:
+    type: tile
+    url: "http://tile.openstreetmap.org/%(tms_path)s.png"
+    grid: GLOBAL_WEBMERCATOR
+
+grids:
+  wgs84:
+    srs: 'EPSG:4326'
+    bbox: [-180, -90, 180, 90]
+    bbox_srs: 'EPSG:4326'
+    # res: [0.15873908440210452, 0.07936954220105226, 0.03968477110052613, 0.02539825350433673, 0.012699126752168366, 0.006349563376084183, 0.0031747816880420914, 0.0015873908440210457, 0.0007936954220105229, 0.00031747816880420905, 0.00015873908440210453, 0.00007936954220105226, 0.000031747816880420904, 0.000015873908440210452, 0.000007936954220105226, 0.000003174781688042091, 0.0000015873908440210455]
+    res_factor: 'sqrt2'
+    tile_size: [512, 512]
+  sphericalmercator:
+    base: GLOBAL_MERCATOR
+    num_levels: 18
+
+globals:
+  # cache options
+  cache:
+    base_dir: '/opt/mapproxy/tilecache'
+    lock_dir: '/opt/mapproxy/tilecache/tilelocks'
+    meta_size: [2, 2]
+    meta_buffer: 0
+    concurrent_tile_creators: 16
+
+  # image/transformation options
+  image:
+      resampling_method: bilinear
+      jpeg_quality: 90
+      # stretch cached images by this factor before using the next level
+      stretch_factor: 1.1
+      # shrink cached images up to this factor before returning an empty image (for the first level)
+      max_shrink_factor: 4.0
+
+  http:
+    ssl_no_cert_checks: true
+
