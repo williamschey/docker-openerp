@@ -1,20 +1,20 @@
 #!/bin/bash
 
+# TODO: much BETTER syncdb
+# TODO: run $db_start and $db_stop only on a local db
 
 function provision()
 {
-    # start db only if local
     $db_start
     mysql $db_name < $project_root/db_schema.sql
     $db_stop
-    # run django-admin.py deploy
 }
 
 function run()
 {
     $db_start
     $apache2_start
-    tail -f /var/log/apache2/$project_name.error.log
+    tail -F -n 0 /var/log/apache2/$project_name.error.log
 }
 
 SCRIPT="`basename $0`"
