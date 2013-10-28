@@ -1,0 +1,1147 @@
+cleanups:
+  clean_ge34_cache:
+    caches: [ge34_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge214_cache:
+    caches: [ge214_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge40_cache:
+    caches: [ge40_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge26_cache:
+    caches: [ge26_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge171_cache:
+    caches: [ge171_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge172_cache:
+    caches: [ge172_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge173_cache:
+    caches: [ge173_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge174_cache:
+    caches: [ge174_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge175_cache:
+    caches: [ge175_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge176_cache:
+    caches: [ge176_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge162_cache:
+    caches: [ge162_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 0
+  clean_ge10_cache:
+    caches: [ge10_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge152_cache:
+    caches: [ge152_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge95_cache:
+    caches: [ge95_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge144_cache:
+    caches: [ge144_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge99_cache:
+    caches: [ge99_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge202_cache:
+    caches: [ge202_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge131_cache:
+    caches: [ge131_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge41_cache:
+    caches: [ge41_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge7_cache:
+    caches: [ge7_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge133_cache:
+    caches: [ge133_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge197_cache:
+    caches: [ge197_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge198_cache:
+    caches: [ge198_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge200_cache:
+    caches: [ge200_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge150_cache:
+    caches: [ge150_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge156_cache:
+    caches: [ge156_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge43_cache:
+    caches: [ge43_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge161_cache:
+    caches: [ge161_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge301_cache:
+    caches: [ge301_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge302_cache:
+    caches: [ge302_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge303_cache:
+    caches: [ge303_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge304_cache:
+    caches: [ge304_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge44_cache:
+    caches: [ge44_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge153_cache:
+    caches: [ge153_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge132_cache:
+    caches: [ge132_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge46_cache:
+    caches: [ge46_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge90_cache:
+    caches: [ge90_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge142_cache:
+    caches: [ge142_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge249_cache:
+    caches: [ge249_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge243_cache:
+    caches: [ge243_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge160_cache:
+    caches: [ge160_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge19_cache:
+    caches: [ge19_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge305_cache:
+    caches: [ge305_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge255_cache:
+    caches: [ge255_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge244_cache:
+    caches: [ge244_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge226_cache:
+    caches: [ge226_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge259_cache:
+    caches: [ge259_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge18_cache:
+    caches: [ge18_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge16_cache:
+    caches: [ge16_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge49_cache:
+    caches: [ge49_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge50_cache:
+    caches: [ge50_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge238_cache:
+    caches: [ge238_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge256_cache:
+    caches: [ge256_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge257_cache:
+    caches: [ge257_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge239_cache:
+    caches: [ge239_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge146_cache:
+    caches: [ge146_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge56_cache:
+    caches: [ge56_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge69_cache:
+    caches: [ge69_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge55_cache:
+    caches: [ge55_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge66_cache:
+    caches: [ge66_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge67_cache:
+    caches: [ge67_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge57_cache:
+    caches: [ge57_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge258_cache:
+    caches: [ge258_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge234_cache:
+    caches: [ge234_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge240_cache:
+    caches: [ge240_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge130_cache:
+    caches: [ge130_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge241_cache:
+    caches: [ge241_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge126_cache:
+    caches: [ge126_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge164_cache:
+    caches: [ge164_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 0
+  clean_ge165_cache:
+    caches: [ge165_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 0
+  clean_ge242_cache:
+    caches: [ge242_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge299_cache:
+    caches: [ge299_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge166_cache:
+    caches: [ge166_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 0
+  clean_ge167_cache:
+    caches: [ge167_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 0
+  clean_ge262_cache:
+    caches: [ge262_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge263_cache:
+    caches: [ge263_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge264_cache:
+    caches: [ge264_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge265_cache:
+    caches: [ge265_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge266_cache:
+    caches: [ge266_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge267_cache:
+    caches: [ge267_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge268_cache:
+    caches: [ge268_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge269_cache:
+    caches: [ge269_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge270_cache:
+    caches: [ge270_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge271_cache:
+    caches: [ge271_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge272_cache:
+    caches: [ge272_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge273_cache:
+    caches: [ge273_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge274_cache:
+    caches: [ge274_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge275_cache:
+    caches: [ge275_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge276_cache:
+    caches: [ge276_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge277_cache:
+    caches: [ge277_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge278_cache:
+    caches: [ge278_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge279_cache:
+    caches: [ge279_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge280_cache:
+    caches: [ge280_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge281_cache:
+    caches: [ge281_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge70_cache:
+    caches: [ge70_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge58_cache:
+    caches: [ge58_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge282_cache:
+    caches: [ge282_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge222_cache:
+    caches: [ge222_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge223_cache:
+    caches: [ge223_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge247_cache:
+    caches: [ge247_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge261_cache:
+    caches: [ge261_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge260_cache:
+    caches: [ge260_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge235_cache:
+    caches: [ge235_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge137_cache:
+    caches: [ge137_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge59_cache:
+    caches: [ge59_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge192_cache:
+    caches: [ge192_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge60_cache:
+    caches: [ge60_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge62_cache:
+    caches: [ge62_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge5_cache:
+    caches: [ge5_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge61_cache:
+    caches: [ge61_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge71_cache:
+    caches: [ge71_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge147_cache:
+    caches: [ge147_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge195_cache:
+    caches: [ge195_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge196_cache:
+    caches: [ge196_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge72_cache:
+    caches: [ge72_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge73_cache:
+    caches: [ge73_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge74_cache:
+    caches: [ge74_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge205_cache:
+    caches: [ge205_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge283_cache:
+    caches: [ge283_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge139_cache:
+    caches: [ge139_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge76_cache:
+    caches: [ge76_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge64_cache:
+    caches: [ge64_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge63_cache:
+    caches: [ge63_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge15_cache:
+    caches: [ge15_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge309_cache:
+    caches: [ge309_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge215_cache:
+    caches: [ge215_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge284_cache:
+    caches: [ge284_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge217_cache:
+    caches: [ge217_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge310_cache:
+    caches: [ge310_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge138_cache:
+    caches: [ge138_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge206_cache:
+    caches: [ge206_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge29_cache:
+    caches: [ge29_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge285_cache:
+    caches: [ge285_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge286_cache:
+    caches: [ge286_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge33_cache:
+    caches: [ge33_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge77_cache:
+    caches: [ge77_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge78_cache:
+    caches: [ge78_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge135_cache:
+    caches: [ge135_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge311_cache:
+    caches: [ge311_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge145_cache:
+    caches: [ge145_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge100_cache:
+    caches: [ge100_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge79_cache:
+    caches: [ge79_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge219_cache:
+    caches: [ge219_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge54_cache:
+    caches: [ge54_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge11_cache:
+    caches: [ge11_cache]
+    grids: [sphericalmercator]
+    remove_before:
+      minutes: 50000
+  clean_ge220_cache:
+    caches: [ge220_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge293_cache:
+    caches: [ge293_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge250_cache:
+    caches: [ge250_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge221_cache:
+    caches: [ge221_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge80_cache:
+    caches: [ge80_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge148_cache:
+    caches: [ge148_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge287_cache:
+    caches: [ge287_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge134_cache:
+    caches: [ge134_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge143_cache:
+    caches: [ge143_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge97_cache:
+    caches: [ge97_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge96_cache:
+    caches: [ge96_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge251_cache:
+    caches: [ge251_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge288_cache:
+    caches: [ge288_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge37_cache:
+    caches: [ge37_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge289_cache:
+    caches: [ge289_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge115_cache:
+    caches: [ge115_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge113_cache:
+    caches: [ge113_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge108_cache:
+    caches: [ge108_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge111_cache:
+    caches: [ge111_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge118_cache:
+    caches: [ge118_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge119_cache:
+    caches: [ge119_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge109_cache:
+    caches: [ge109_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge117_cache:
+    caches: [ge117_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge116_cache:
+    caches: [ge116_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge120_cache:
+    caches: [ge120_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge114_cache:
+    caches: [ge114_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge105_cache:
+    caches: [ge105_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge107_cache:
+    caches: [ge107_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge112_cache:
+    caches: [ge112_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge110_cache:
+    caches: [ge110_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge81_cache:
+    caches: [ge81_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge9_cache:
+    caches: [ge9_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge204_cache:
+    caches: [ge204_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge17_cache:
+    caches: [ge17_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge82_cache:
+    caches: [ge82_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge225_cache:
+    caches: [ge225_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge184_cache:
+    caches: [ge184_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 0
+  clean_ge83_cache:
+    caches: [ge83_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge39_cache:
+    caches: [ge39_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge136_cache:
+    caches: [ge136_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge124_cache:
+    caches: [ge124_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge201_cache:
+    caches: [ge201_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge290_cache:
+    caches: [ge290_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge129_cache:
+    caches: [ge129_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge30_cache:
+    caches: [ge30_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge104_cache:
+    caches: [ge104_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge121_cache:
+    caches: [ge121_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge106_cache:
+    caches: [ge106_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge122_cache:
+    caches: [ge122_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge103_cache:
+    caches: [ge103_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge123_cache:
+    caches: [ge123_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge89_cache:
+    caches: [ge89_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge84_cache:
+    caches: [ge84_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge36_cache:
+    caches: [ge36_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge292_cache:
+    caches: [ge292_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge187_cache:
+    caches: [ge187_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge194_cache:
+    caches: [ge194_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge48_cache:
+    caches: [ge48_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge98_cache:
+    caches: [ge98_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge252_cache:
+    caches: [ge252_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge140_cache:
+    caches: [ge140_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge87_cache:
+    caches: [ge87_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge308_cache:
+    caches: [ge308_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge229_cache:
+    caches: [ge229_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge295_cache:
+    caches: [ge295_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge38_cache:
+    caches: [ge38_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge253_cache:
+    caches: [ge253_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge68_cache:
+    caches: [ge68_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge191_cache:
+    caches: [ge191_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge296_cache:
+    caches: [ge296_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge128_cache:
+    caches: [ge128_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge125_cache:
+    caches: [ge125_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge127_cache:
+    caches: [ge127_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 600
+  clean_ge300_cache:
+    caches: [ge300_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge28_cache:
+    caches: [ge28_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge297_cache:
+    caches: [ge297_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge233_cache:
+    caches: [ge233_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge307_cache:
+    caches: [ge307_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge291_cache:
+    caches: [ge291_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge85_cache:
+    caches: [ge85_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge86_cache:
+    caches: [ge86_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 50000
+  clean_ge102_cache:
+    caches: [ge102_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge101_cache:
+    caches: [ge101_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+  clean_ge141_cache:
+    caches: [ge141_cache]
+    grids: [wgs84]
+    remove_before:
+      minutes: 5
+
