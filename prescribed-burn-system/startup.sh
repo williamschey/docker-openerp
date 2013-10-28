@@ -1,10 +1,12 @@
 #!/bin/bash
 
+# TODO: $db_start/$db_stop only for local DBs.
 
 function provision()
 {
     $db_start
     django-admin.py deploy
+    chmod -R g+w $project_logs
     $db_stop
 }
 
@@ -13,7 +15,7 @@ function run()
     $db_start
     $apache2_start
     $redis_start
-    tail -f -n 0 /var/log/apache2/$project_name.error.log
+    tail -F -n 0 /var/log/apache2/$project_name.error.log
 }
 
 SCRIPT="`basename $0`"

@@ -2,25 +2,27 @@
 #
 # Usage: docker run dpaw/prescribed-burn-system [provisionAndRun|run|provision]
 #
-# Description/requirements:
+# Description: Clones and installs django-prescribed-burn-system into
+#              $project_root in development mode (along with all dependencies).
 #
-# Sets:
+# Sets: $apache2_start, $redis_start, $project_name, $project_root,
+#       $project_logs, $project_pip, $STATIC_ROOT, $MEDIA_ROOT, $SECRET_KEY,
+#       $DJANGO_SETTINGS_MODULE
 #
 # Exposes: 8080/pbs
 #
 
-#FROM dpaw/postgis:2.1
-FROM 1eaecd41f043
+FROM dpaw/postgis:2.1
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 # Setup PBS
-ENV apache2_start service apache2 start
-ENV redis_start service redis start
+ENV apache2_start apachectl start
+ENV redis_start service redis-server start
 # project settings
 ENV project_name pbs
 ENV project_root /var/www/django_project/
 ENV project_logs /var/log/django/
-ENV project_pip hg+https://tomask:J:um:B087@hg.dec.wa.gov.au/projects/prescribed-burn-system@2300
+ENV project_pip hg+https://hg.dec.wa.gov.au/projects/prescribed-burn-system@2300
 # django settings
 ENV STATIC_ROOT /var/www/django_project_static/
 ENV MEDIA_ROOT /var/www/django_project_media/
@@ -36,19 +38,19 @@ RUN apt-get -y install libapache2-mod-wsgi python-setuptools \
     a2dissite '*'; easy_install pip; \
     \
     mkdir -p "$project_logs" && chown -R :www-data "$project_logs" && \
-    chmod -R g+w "$project_logs" && \
+    chmod -R g+ws "$project_logs" && \
     mkdir -p "$MEDIA_ROOT" && \
     mkdir -p "$project_root" && cd "$project_root" && \
     pip install -M --index-url 'https://hg.dec.wa.gov.au/pypi' \
         --extra-index-url 'http://pypi.python.org/pypi' \
         -e "$project_pip#egg=$project_name" && \
     \
-    echo "export project_name=$project_name" >> /etc/apache2/envvars \
-    echo "export project_root=$project_root" >> /etc/apache2/envvars \
-    echo "export STATIC_ROOT=$STATIC_ROOT" >> /etc/apache2/envvars \
-    ln -s /usr/local/bin/pbs-startup.sh /usr/local/bin/provision && \
-    ln -s /usr/local/bin/pbs-startup.sh /usr/local/bin/provisionAndRun && \
-    ln -s /usr/local/bin/pbs-startup.sh /usr/local/bin/run;
+    echo "export project_name=$project_name" >> /etc/apache2/envvars; \
+    echo "export project_root=$project_root" >> /etc/apache2/envvars; \
+    echo "export STATIC_ROOT=$STATIC_ROOT" >> /etc/apache2/envvars; \
+    ln -s /usr/local/bin/startup.sh /usr/local/bin/provision && \
+    ln -s /usr/local/bin/startup.sh /usr/local/bin/provisionAndRun && \
+    ln -s /usr/local/bin/startup.sh /usr/local/bin/run;
 
 ADD startup.sh /usr/local/bin/startup.sh
 ADD apache.conf /etc/apache2/conf.d/django_project.conf
