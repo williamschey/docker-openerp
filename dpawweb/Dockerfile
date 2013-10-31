@@ -6,6 +6,10 @@
 #
 # Sets:
 #
+# TODO: might be a good idea to perform a full local installation via the
+# /old-installation directory/url-endpoint so that the db schema along with
+# default values can be provisioned again or to a remote db.
+#
 # Exposes: 8080/pbs
 #
 
