@@ -10,7 +10,7 @@
 # Exposes: 8080/openerp
 #
 
-FROM dpaw/postgresql
+FROM dpaw_ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 # project settings
@@ -18,25 +18,22 @@ ENV project_name openerp
 ENV project_root /var/www/openerp/
 ENV project_url http://nightly.openerp.com/7.0/nightly/src/openerp-7.0-latest.tar.gz
 
-RUN adduser --system --home=$project_root --group openerp; \
+RUN adduser --system --home=$project_root --group openerp && \
     apt-get -y install python-dateutil python-docutils python-feedparser \
-        python-gdata python-jinja2 python-ldap python-libxslt1 python-lxml \
-        python-mako python-mock python-openid python-psycopg2 python-psutil \
+        python-gdata python-jinja2 python-libxslt1 \
+        python-mako python-mock python-openid python-psutil \
         python-pybabel python-pychart python-pydot python-pyparsing \
-        python-reportlab python-simplejson python-tz python-unittest2 \
+        python-simplejson python-tz python-unittest2 \
         python-vatnumber python-vobject python-webdav python-werkzeug \
-        python-xlwt python-yaml python-zsi wget; \
-    cd "$project_root"; \
-    wget "$project_url"; \
-    tar xvf openerp-*.tar.gz; \
-    chown -R openerp: *; \
-    ln -s openerp-*/ openerp-server; \
-    ln -s /usr/local/bin/startup.sh /usr/local/bin/provision && \
-    ln -s /usr/local/bin/startup.sh /usr/local/bin/provisionAndRun && \
-    ln -s /usr/local/bin/startup.sh /usr/local/bin/run;
+        python-xlwt python-yaml python-zsi
+RUN cd "$project_root" && \
+    wget "$project_url" && \
+    tar xvf openerp-*.tar.gz && \
+    chown -R openerp: * && \
+    ln -s openerp-*/ openerp-server
 
 ADD startup.sh /usr/local/bin/startup.sh
 
 CMD ["startup.sh"]
-EXPOSE 8069
+EXPOSE 8080
 USER openerp

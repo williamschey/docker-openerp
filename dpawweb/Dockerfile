@@ -13,7 +13,7 @@
 # Exposes: 8080/pbs
 #
 
-FROM dpaw/mysql
+FROM dpaw_ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 # services
@@ -27,8 +27,7 @@ ENV SECRET_KEY cHMYSm9hD1jBKSAZ
 
 ADD startup.sh /usr/local/bin/startup.sh
 
-RUN apt-get -y install libapache2-mod-php5 mercurial php5-mysql && \
-    a2dissite '*'; a2enmod rewrite expires; \
+RUN a2dissite '*'; a2enmod rewrite expires; \
     \
     mkdir -p "$project_root" && \
     hg clone "$project_hg" -u 310 "$project_root" && \

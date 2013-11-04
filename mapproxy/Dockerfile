@@ -1,7 +1,6 @@
-FROM dpaw/ubuntu
+FROM dpaw_ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
-RUN apt-get install -y python-pip python-imaging python-yaml python-dev libproj0 libgeos-dev python-lxml libgdal-dev && pip install virtualenv
 RUN cd /opt && virtualenv --system-site-packages mapproxy
 RUN /opt/mapproxy/bin/pip install MapProxy gunicorn eventlet
 
