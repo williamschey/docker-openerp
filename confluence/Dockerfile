@@ -9,7 +9,7 @@
 # Exposes: 8080/confluence
 #
 
-FROM dpaw/java-postgresql
+FROM dpaw_ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 ENV project_name confluence

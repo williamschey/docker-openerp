@@ -12,7 +12,7 @@
 # Exposes: 8080/pbs
 #
 
-FROM dpaw/postgis:2.1
+FROM dpaw_ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 # Setup PBS
@@ -30,27 +30,14 @@ ENV SECRET_KEY 7e8964cebd5a2c8f3cb402337a05c8b5c92cd266c252bd8c1ca003c41a3443f4
 ENV DJANGO_SETTINGS_MODULE pbs.settings
 
 # install dependencies, pbs, startup script
-RUN apt-get -y install libapache2-mod-wsgi python-setuptools \
-                       build-essential python-dev binutils \
-                       libproj-dev gdal-bin libldap2-dev libsasl2-dev \
-                       mercurial python-psycopg2 python-lxml \
-                       python-beautifulsoup redis-server && \
-    a2dissite '*'; easy_install pip; \
-    \
+RUN a2dissite '*'; \
     mkdir -p "$project_logs" && chown -R :www-data "$project_logs" && \
     chmod -R g+ws "$project_logs" && \
     mkdir -p "$MEDIA_ROOT" && \
-    mkdir -p "$project_root" && cd "$project_root" && \
-    pip install -M --index-url 'https://hg.dec.wa.gov.au/pypi' \
+    mkdir -p "$project_root" && cd "$project_root"
+RUN pip install -M --index-url 'https://hg.dec.wa.gov.au/pypi' \
         --extra-index-url 'http://pypi.python.org/pypi' \
-        -e "$project_pip#egg=$project_name" && \
-    \
-    echo "export project_name=$project_name" >> /etc/apache2/envvars; \
-    echo "export project_root=$project_root" >> /etc/apache2/envvars; \
-    echo "export STATIC_ROOT=$STATIC_ROOT" >> /etc/apache2/envvars; \
-    ln -s /usr/local/bin/startup.sh /usr/local/bin/provision && \
-    ln -s /usr/local/bin/startup.sh /usr/local/bin/provisionAndRun && \
-    ln -s /usr/local/bin/startup.sh /usr/local/bin/run;
+        -e "$project_pip#egg=$project_name"
 
 ADD startup.sh /usr/local/bin/startup.sh
 ADD apache.conf /etc/apache2/conf.d/django_project.conf
