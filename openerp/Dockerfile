@@ -18,28 +18,25 @@ ENV project_name openerp
 ENV project_root /var/www/openerp/
 ENV project_url http://nightly.openerp.com/7.0/nightly/src/openerp-7.0-latest.tar.gz
 
-ADD startup.sh /usr/local/bin/startup.sh
-
 RUN adduser --system --home=$project_root --group openerp; \
-    apt-get install python-dateutil python-docutils python-feedparser \
+    apt-get -y install python-dateutil python-docutils python-feedparser \
         python-gdata python-jinja2 python-ldap python-libxslt1 python-lxml \
         python-mako python-mock python-openid python-psycopg2 python-psutil \
         python-pybabel python-pychart python-pydot python-pyparsing \
         python-reportlab python-simplejson python-tz python-unittest2 \
         python-vatnumber python-vobject python-webdav python-werkzeug \
         python-xlwt python-yaml python-zsi wget; \
-    cd "$project_home"; \
+    cd "$project_root"; \
     wget "$project_url"; \
     tar xvf openerp-*.tar.gz; \
     chown -R openerp: *; \
     ln -s openerp-*/ openerp-server; \
-    echo "export project_name=$project_name" >> /etc/apache2/envvars; \
-    echo "export project_root=$project_root" >> /etc/apache2/envvars; \
-    echo "export STATIC_ROOT=$STATIC_ROOT" >> /etc/apache2/envvars; \
     ln -s /usr/local/bin/startup.sh /usr/local/bin/provision && \
     ln -s /usr/local/bin/startup.sh /usr/local/bin/provisionAndRun && \
     ln -s /usr/local/bin/startup.sh /usr/local/bin/run;
 
+ADD startup.sh /usr/local/bin/startup.sh
+
 CMD ["startup.sh"]
-EXPOSE 8080
+EXPOSE 8069
 USER openerp

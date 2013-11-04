@@ -11,7 +11,9 @@ function provision()
 function run()
 {
     $db_start
-    tail -F -n 0 /var/log/apache2/$project_name.error.log
+    $project_root/openerp-server/openerp-server --logfile=/var/log/openerp.log\
+        --database="$db_name" --db-user="$db_user" --db-password="$db_pass" \
+        --db-host="$db_host" --db-port="$db_port"
 }
 
 SCRIPT="`basename $0`"
