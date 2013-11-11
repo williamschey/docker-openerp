@@ -1,9 +1,0 @@
-#install4j response file for Confluence 5.1.3
-#Fri May 24 18:57:54 WST 2013
-executeLauncherAction$Boolean=true
-app.install.service$Boolean=false
-existingInstallationDir=/var/www/confluence/confluence/
-sys.confirmedUpdateInstallationString=true
-sys.languageId=en
-backupConfluence$Boolean=false
-sys.installationDir=/var/www/confluence/confluence/

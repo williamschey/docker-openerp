@@ -1,36 +1,40 @@
-# Confluence java app
-#
-# Usage: docker run dpaw/confluence [provisionAndRun|run|provision]
-#
-# Description/requirements:
-#
-# Sets:
-#
-# Exposes: 8080/confluence
-#
-
-FROM dpaw_ubuntu:12.04
+#!/bin/bash
+FROM docker.dpaw.wa.gov.au/ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
-ENV project_name confluence
-ENV project_root /var/www/
-ENV confluence_url http://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-5.3.1-x64.bin
-ENV ATTACHMENTS_DIR /mnt/remote/static/confluence/attachments/
-ENV confluence_start $project_root/bin/start-confluence.sh -fg
+ENV PGVERSION 9.3
+ENV PGHOST localhost
+ENV PGPORT 5432
+RUN /etc/init.d/postgresql start; \
+    sudo -u postgres psql -c \
+    "CREATE USER pguser WITH CREATEROLE SUPERUSER PASSWORD 'pgpassword';"
+ENV PGUSER pguser 
+ENV PGPASSWORD pgpassword
+ENV PGDATABASE pgdatabase
+RUN /etc/init.d/postgresql start; \
+    createdb $PGDATABASE -E utf8 -T template0; \
+    psql -c "create extension postgis"; \
+    /etc/init.d/postgresql stop;
 
-ADD response.varfile $project_root/
-ADD confluence_8222/ $project_root/confluence_8222
-ADD confluence_8222.home/ $project_root/confluence_8222.home
-ADD startup.sh /usr/local/bin/startup.sh
+ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 
-RUN apt-get -y install wget; \
-    cd $project_root; \
-    wget $confluence_url;
-#    bash atlassian-confluence-*.bin -q -varfile $project_root/response.varfile
-RUN ln -s /usr/local/bin/pbs-startup.sh /usr/local/bin/provision; \
-    ln -s /usr/local/bin/pbs-startup.sh /usr/local/bin/provisionAndRun; \
-    ln -s /usr/local/bin/pbs-startup.sh /usr/local/bin/run;
+ENV DB_VOLUME /var/lib/postgresql
+# Confluence data files
+ENV APP_VOLUME /var/local/confluence
+# Confluence application
+ENV APP_FILES /usr/local/confluence
+ENV CONFLUENCE_VERSION 5.3.1
 
-# Run confluence and expose it by default
-CMD ["startup.sh"]
+RUN mkdir -p $APP_VOLUME && mkdir -p $APP_FILES && cd $APP_FILES && \
+    wget http://www.atlassian.com/software/confluence/downloads/binary/atlassian-confluence-$CONFLUENCE_VERSION.tar.gz
+RUN apt-get -y install libice-dev libsm-dev libx11-dev libxext-dev libxp-dev libxt-dev libxtst-dev
+RUN cd $APP_FILES && tar xvf atlassian-confluence-$CONFLUENCE_VERSION.tar.gz && \
+    mv atlassian-confluence-$CONFLUENCE_VERSION/* ./ && \
+    rmdir atlassian-confluence-$CONFLUENCE_VERSION/
+# Configure confluence
+RUN echo -e "\nconfluence.home=$APP_VOLUME" >> $APP_FILES/confluence/WEB-INF/classes/confluence-init.properties
+    
+ADD startup.py /usr/local/bin/startup.py
+
+ENTRYPOINT ["startup.py"]
 EXPOSE 8090

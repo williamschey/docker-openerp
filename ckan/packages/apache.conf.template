@@ -1,0 +1,24 @@
+Listen %(HTTP_PORT)s
+ 
+<VirtualHost *:%(HTTP_PORT)s>
+    WSGIDaemonProcess ckan_%(HTTP_PORT)s processes=32 threads=16 display-name=ckan_default
+    WSGIProcessGroup ckan_%(HTTP_PORT)s
+ 
+    <Location /localhost>
+        Order deny,allow
+        Allow from all
+        Allow from 127.0.0.1 ::1
+    </Location>
+ 
+    ProxyPass /%(SOLR_NAME)s http://127.0.0.1:%(TOMCAT_PORT)s/%(SOLR_NAME)s
+    ProxyPassReverse /%(SOLR_NAME)s http://127.0.0.1:%(TOMCAT_PORT)s/%(SOLR_NAME)s
+ 
+    WSGIScriptAlias / /var/www/ckan_%(HTTP_PORT)s/apache_ckan.wsgi
+    WSGIPassAuthorization On
+ 
+    Alias /media/ /var/www/ckan_%(HTTP_PORT)s/media/
+
+    ErrorLog "/var/log/apache2/ckan_%(HTTP_PORT)s.error.log"
+    CustomLog "/var/log/apache2/ckan_%(HTTP_PORT)s.access.log" combined
+</VirtualHost>
+

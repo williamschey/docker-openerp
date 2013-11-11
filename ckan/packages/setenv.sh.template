@@ -1,0 +1,2 @@
+export JRE_HOME=%(JAVA_HOME)s
+export JAVA_OPTS=-Dsolr.solr.home=%(SOLR_HOME)s

@@ -1,0 +1,4 @@
+[program:%(HTTP_PORT)s]
+user=www-data
+directory=/var/www/ckan_%(HTTP_PORT)s
+command=/var/www/ckan_%(HTTP_PORT)s/opt/%(TOMCAT_NAME)s/bin/startup.sh
