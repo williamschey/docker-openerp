@@ -4,11 +4,9 @@
 NAME=docker.dpaw.wa.gov.au/ubuntu
 TAG=12.04
 set -e
-if [ "$1" == "export" ]; then
-    docker export $(docker run -d $NAME:$TAG bash) | pv | gzip > $NAME-$TAG.tar.gz
-elif [ "$1" == "push" ]; then
-    docker push $NAME
+if [ "$1" == "flatten" ]; then
+    docker export $(docker run -d $NAME bash) | pv | docker import - $NAME:$TAG
 else
     docker build $@ -t $NAME . 
-    docker export $(docker run -d $NAME bash) | pv | docker import - $NAME:$TAG
+    docker push $NAME
 fi
