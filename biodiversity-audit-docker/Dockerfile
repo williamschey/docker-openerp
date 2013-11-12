@@ -26,9 +26,8 @@ ENV DB_VOLUME /var/lib/postgresql
 ENV APP_VOLUME $APP_PATH
 ENV DATA_VOLUME $APP_PATH/media
 
-RUN mkdir -p $APP_PREFIX
-ADD ./startup.py $APP_PREFIX/
-RUN ln -s $APP_PREFIX/startup.py /usr/local/bin/startup.py
-RUN startup.py install
+ENV STARTUP_SCRIPT startup.py
+ADD ./$STARTUP_SCRIPT /usr/local/bin/
+RUN $STARTUP_SCRIPT install
 
 ENTRYPOINT ["startup.py"]
