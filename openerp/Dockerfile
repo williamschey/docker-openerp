@@ -10,7 +10,7 @@
 # Exposes: 8080/openerp
 #
 
-FROM dpaw_ubuntu:12.04
+FROM docker.dpaw.wa.gov.au/ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
 # project settings
