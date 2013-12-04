@@ -8,5 +8,4 @@ if [ "$1" == "flatten" ]; then
     docker export $(docker run -d $NAME bash) | pv | docker import - $NAME:$TAG
 else
     docker build $@ -t $NAME . 
-    docker push $NAME
 fi

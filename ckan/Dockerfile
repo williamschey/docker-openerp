@@ -1,38 +1,32 @@
+#!/bin/bash
 FROM docker.dpaw.wa.gov.au/ubuntu:12.04
 MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
 
-##### PostgreSQL
 ENV PGVERSION 9.3
 ENV PGHOST localhost
 ENV PGPORT 5432
 RUN /etc/init.d/postgresql start; \
     sudo -u postgres psql -c \
-    "CREATE USER ckan WITH CREATEROLE SUPERUSER PASSWORD 'ckan';"
-ENV PGUSER ckan 
-ENV PGPASSWORD ckan 
-ENV PGDATABASE ckan_database
-ENV DS_PGUSER ckands
-ENV DS_PGPASSWORD ckands
-ENV DS_PGDATABASE ckan_datastore
+    "CREATE USER ckan_default WITH CREATEROLE SUPERUSER PASSWORD 'pass';"
+ENV PGUSER ckan_default
+ENV PGPASSWORD pass
+ENV PGDATABASE ckan_default
 RUN /etc/init.d/postgresql start; \
     createdb $PGDATABASE -E utf8 -T template0; \
     psql -c "create extension postgis"; \
-    createdb $DS_PGDATABASE -E utf8 -T template0; \
-    psql -c "create extension postgis"; \
     /etc/init.d/postgresql stop;
-##### Begin CKAN block.
-ENV DB_VOLUME /var/lib/postgresql
-ENV CKAN_ETC /etc/ckan
-ENV SOLR_HOST localhost
-ENV SOLR_PORT 8983
-ENV APP_PORT 5000
-# Add startup script
-RUN pip install hg+https://bitbucket.org/dpaw/docker-startup
-ENV STARTUP_SCRIPT startup.py
-ADD ./$STARTUP_SCRIPT /usr/local/bin/
-RUN $STARTUP_SCRIPT install
-RUN $STARTUP_SCRIPT provision 
-##### End CKAN block.
 
-ENTRYPOINT ["startup.py"]
-EXPOSE 5000
+ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+
+RUN apt-get -y install nginx
+RUN cd /root && \
+    wget http://packaging.ckan.org/python-ckan_2.0_amd64.deb && \
+    dpkg -i python-ckan_2.0_amd64.deb
+
+# Configuration
+RUN sed 's/NO_START=1/NO_START=0/g' -i /etc/default/jetty && \
+    sed "s/#JAVA_HOME=/JAVA_HOME=$JAVA_HOME" -i /etc/default/jetty && \
+    ln -sf /usr/lib/ckan/default/src/ckan/ckan/config/solr/schema-2.0.xml /etc/solr/conf/schema.xml && \
+    sed 's/#solr_url/solr_url/g' -i /etc/ckan/default/production.ini
+
+
