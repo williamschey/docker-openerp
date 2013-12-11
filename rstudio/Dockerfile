@@ -13,6 +13,9 @@ RUN mkdir -p /var/run/rstudio-server /var/lock/rstudio-server /var/log/rstudio-s
 RUN cp /usr/lib/rstudio-server/extras/apparmor/rstudio-server /etc/apparmor.d/
 #RUN apparmor_parser -r /etc/apparmor.d/rstudio-server ## apparmor_parser: not found
 
+# NetCDF
+RUN apt-get install netcdf-bin python-netcdf nco libnetcdf-dev
+
 ENTRYPOINT ["sh", "-c", "/usr/lib/rstudio-server/bin/rserver && bash"]
 EXPOSE 8787
 
