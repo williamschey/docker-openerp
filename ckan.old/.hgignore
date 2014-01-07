@@ -1,6 +1,0 @@
-syntax:glob
-*.tar.gz
-*.tgz
-*.pyc
-*.swp
-private_settings.py

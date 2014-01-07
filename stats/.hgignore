@@ -1,5 +1,0 @@
-syntax:glob
-*.tar.gz
-*.tgz
-*.pyc
-*.swp
