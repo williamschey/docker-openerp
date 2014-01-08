@@ -33,7 +33,7 @@ RUN adduser --system --home=$project_root --group openerp && \
         python-simplejson python-tz python-unittest2 \
         python-vatnumber python-vobject python-webdav python-werkzeug \
         python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
-        postgresql-client-9.1
+        postgresql-client-9.1 python-cups python-django-auth-ldap
 RUN apt-get -y install wget sudo
 #RUN useradd openerp
 RUN adduser openerp sudo
@@ -47,5 +47,5 @@ RUN cd / && \
 ADD startup.sh /startup.sh
 
 CMD ["startup.sh"]
-EXPOSE 8080
+EXPOSE 8069
 USER openerp
