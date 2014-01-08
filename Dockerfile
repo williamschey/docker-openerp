@@ -44,7 +44,7 @@ RUN cd / && \
     chown -R openerp: openerp-* && \
     ln -s openerp-*/ openerp-server
 
-ADD startup.sh /usr/local/bin/startup.sh
+ADD startup.sh /startup.sh
 
 CMD ["startup.sh"]
 EXPOSE 8080

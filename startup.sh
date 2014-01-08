@@ -10,10 +10,10 @@ function provision()
 
 function run()
 {
-    $db_start
-    $project_root/openerp-server/openerp-server --logfile=/var/log/openerp.log\
-        --database="$DB_NAME" --db-user="$DB_USER" --db-password="$DB_PASSWORD" \
-        --db-host="$DB_HOST" --db-port="$DB_PORT" --addons-path="$ADDONS_PATH"
+    $DB_START
+    /openerp-server/openerp-server --logfile=/var/log/openerp.log\
+        --database="$DB_NAME" --db_user="$DB_USER" --db_password="$DB_PASSWORD" \
+        --db_host="$DB_HOST" --db_port="$DB_PORT" --addons-path="$ADDONS_PATH"
 }
 
 SCRIPT="`basename $0`"
