@@ -32,7 +32,8 @@ RUN adduser --system --home=$project_root --group openerp && \
         python-pybabel python-pychart python-pydot python-pyparsing \
         python-simplejson python-tz python-unittest2 \
         python-vatnumber python-vobject python-webdav python-werkzeug \
-        python-xlwt python-yaml python-zsi python-reportlab python-psycopg2
+        python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
+        postgresql-client-9.1
 RUN apt-get -y install wget sudo
 #RUN useradd openerp
 RUN adduser openerp sudo

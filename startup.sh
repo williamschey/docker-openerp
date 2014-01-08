@@ -4,16 +4,16 @@
 
 function provision()
 {
-    $db_start
-    $db_stop
+    $DB_START
+    $DB_STOP
 }
 
 function run()
 {
     $db_start
     $project_root/openerp-server/openerp-server --logfile=/var/log/openerp.log\
-        --database="$db_name" --db-user="$db_user" --db-password="$db_pass" \
-        --db-host="$db_host" --db-port="$db_port"
+        --database="$DB_NAME" --db-user="$DB_USER" --db-password="$DB_PASSWORD" \
+        --db-host="$DB_HOST" --db-port="$DB_PORT" --addons-path="$ADDONS_PATH"
 }
 
 SCRIPT="`basename $0`"
