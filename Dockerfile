@@ -34,7 +34,18 @@ RUN adduser --system --home=$project_root --group openerp && \
         python-vatnumber python-vobject python-webdav python-werkzeug \
         python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
         postgresql-client-9.1 python-cups python-django-auth-ldap git
-RUN apt-get -y install wget sudo
+
+RUN apt-get -y install wget sudo bzip2
+
+RUN    wget https://wkhtmltopdf.googlecode.com/files/wkhtmltoimage-0.11.0_rc1-static-amd64.tar.bz2 && \
+    wget https://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2 && \
+    bzip2 -d wkhtmltoimage-0.11.0_rc1-static-amd64.tar.bz2 && \
+    tar xvf wkhtmltoimage-0.11.0_rc1-static-amd64.tar && \
+    bzip2 -d wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2 && \
+    tar xvf wkhtmltopdf-0.11.0_rc1-static-amd64.tar && \
+    install wkhtmltopdf-amd64 /usr/bin/wkhtmltopdf && \
+    install wkhtmltoimage-amd64 /usr/bin/wkhtmltoimage 
+
 #RUN useradd openerp
 RUN adduser openerp sudo
 RUN echo openerp:vagrant | chpasswd
