@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME=docker.dpaw.wa.gov.au/openerp
+NAME=jmca/openerp
 TAG=latest
-docker build $@ -t $NAME:$TAG . 
-docker push $NAME
+sudo docker build $@ -t $NAME:$TAG . 
+#docker push $NAME

@@ -33,16 +33,15 @@ RUN adduser --system --home=$project_root --group openerp && \
         python-simplejson python-tz python-unittest2 \
         python-vatnumber python-vobject python-webdav python-werkzeug \
         python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
-        postgresql-client-9.1 python-cups python-django-auth-ldap
+        postgresql-client-9.1 python-cups python-django-auth-ldap git
 RUN apt-get -y install wget sudo
 #RUN useradd openerp
 RUN adduser openerp sudo
 RUN echo openerp:vagrant | chpasswd
 RUN cd / && \
-    wget http://nightly.openerp.com/7.0/nightly/src/openerp-7.0-latest.tar.gz && \
-    tar xvf openerp-*.tar.gz && \
-    chown -R openerp: openerp-* && \
-    ln -s openerp-*/ openerp-server
+    git clone https://github.com/jmcarbo/openerp7.git && \
+    chown -R openerp: openerp7 && \
+    ln -s openerp7/ openerp-server
 
 ADD startup.sh /startup.sh
 
