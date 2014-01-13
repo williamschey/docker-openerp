@@ -1,5 +1,5 @@
 #!/bin/bash
-NAME=jmcarbo/openerp
+NAME=jmca/openerp
 TAG=latest
 sudo docker build $@ -t $NAME:$TAG . 
 #docker push $NAME
