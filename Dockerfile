@@ -52,7 +52,9 @@ RUN echo openerp:vagrant | chpasswd
 RUN cd / && \
     git clone https://github.com/jmcarbo/openerp7.git && \
     chown -R openerp: openerp7 && \
-    ln -s openerp7/ openerp-server
+    ln -s openerp7/ openerp-server && \
+    mkdir /home/openerp && \
+    chown -R openerp: /home/openerp
 
 ADD startup.sh /startup.sh
 
