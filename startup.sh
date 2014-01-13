@@ -6,6 +6,11 @@ function provision()
 {
     $DB_START
     $DB_STOP
+    cd /
+    git clone $ADDONS_GIT  $ADDONS_PATH
+    cd $ADDONS_PATH
+    git submodule init
+    git submodule update
 }
 
 function run()
