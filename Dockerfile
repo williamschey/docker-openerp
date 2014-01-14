@@ -11,7 +11,7 @@
 #
 
 FROM ubuntu:12.04
-MAINTAINER Department of Parks and Wildlife <asi@dpaw.wa.gov.au>
+MAINTAINER Joan Marc Carbo Arnau <jmcarbo@gmail.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
 RUN apt-get update
@@ -22,7 +22,7 @@ RUN apt-get install -q -y vim
 
 # project settings
 ENV project_name openerp
-ENV project_root /var/www/openerp/
+ENV project_root /home/openerp/
 ENV project_url http://nightly.openerp.com/7.0/nightly/src/openerp-7.0-latest.tar.gz
 
 RUN adduser --system --home=$project_root --group openerp && \
