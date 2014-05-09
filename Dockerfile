@@ -10,7 +10,7 @@
 # Exposes: 8080/openerp
 #
 
-FROM ubuntu:12.04
+FROM ubuntu
 MAINTAINER Joan Marc Carbo Arnau <jmcarbo@gmail.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
@@ -22,6 +22,8 @@ RUN apt-get update -y
 #
 
 RUN apt-get install -y git wget
+
+RUN apt-get install -y build-essential python2.7-dev python-setuptools
 
 # project settings
 ENV project_name openerp
