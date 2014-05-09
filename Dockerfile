@@ -19,7 +19,7 @@ RUN apt-get install -f
 RUN apt-get install -q -y language-pack-en
 RUN update-locale LANG=en_US.UTF-8
 
-RUN apt-get install -q -y git
+# RUN apt-get install -q -y git
 
 # project settings
 ENV project_name openerp
