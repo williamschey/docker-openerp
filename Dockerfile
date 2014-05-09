@@ -14,12 +14,14 @@ FROM ubuntu:12.04
 MAINTAINER Joan Marc Carbo Arnau <jmcarbo@gmail.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get install -f
-RUN apt-get install -q -y language-pack-en
-RUN update-locale LANG=en_US.UTF-8
+RUN apt-get update -y
 
-# RUN apt-get install -q -y git
+
+#
+# Install some nice tools
+#
+
+RUN apt-get install -y git wget
 
 # project settings
 ENV project_name openerp
