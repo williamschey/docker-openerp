@@ -18,10 +18,6 @@ RUN apt-get update
 RUN apt-get install -q -y language-pack-en
 RUN update-locale LANG=en_US.UTF-8
 
-RUN apt-get install -q -y libpython2.7
-
-RUN apt-get install -q -y vim
-
 # project settings
 ENV project_name openerp
 ENV project_root /home/openerp/
