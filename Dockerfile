@@ -19,7 +19,7 @@ RUN apt-get install -f
 RUN apt-get install -q -y language-pack-en
 RUN update-locale LANG=en_US.UTF-8
 
-RUN apt-get install -q -y perl-modules liberror-perl
+RUN apt-get install -q -y git
 
 # project settings
 ENV project_name openerp
@@ -34,7 +34,7 @@ RUN adduser --system --home=$project_root --group openerp && \
         python-simplejson python-tz python-unittest2 \
         python-vatnumber python-vobject python-webdav python-werkzeug \
         python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
-        postgresql-client-9.1 python-cups python-django-auth-ldap git
+        postgresql-client-9.1 python-cups python-django-auth-ldap
 
 RUN apt-get -y install wget sudo bzip2
 
