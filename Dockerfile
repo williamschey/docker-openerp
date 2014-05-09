@@ -14,16 +14,11 @@ FROM ubuntu
 MAINTAINER Joan Marc Carbo Arnau <jmcarbo@gmail.com>
 
 RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
-RUN apt-get update -y
+RUN apt-get update
+RUN apt-get install -q -y language-pack-en
+RUN update-locale LANG=en_US.UTF-8
 
-
-#
-# Install some nice tools
-#
-
-RUN apt-get install -y git wget
-
-RUN apt-get install -y build-essential python2.7-dev python-setuptools
+RUN apt-get install -q -y vim
 
 # project settings
 ENV project_name openerp
@@ -31,7 +26,14 @@ ENV project_root /home/openerp/
 ENV project_url http://nightly.openerp.com/7.0/nightly/src/openerp-7.0-latest.tar.gz
 
 RUN adduser --system --home=$project_root --group openerp && \
-    apt-get -y install python-setuptools python-dev build-essential python-ldap
+    apt-get -y install python-dateutil python-docutils python-feedparser \
+        python-gdata python-jinja2 python-libxslt1 \
+        python-mako python-mock python-openid python-psutil \
+        python-pybabel python-pychart python-pydot python-pyparsing \
+        python-simplejson python-tz python-unittest2 \
+        python-vatnumber python-vobject python-webdav python-werkzeug \
+        python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
+        postgresql-client-9.1 python-cups python-django-auth-ldap git
 
 RUN apt-get -y install wget sudo bzip2
 
