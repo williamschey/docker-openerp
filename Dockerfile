@@ -27,14 +27,7 @@ ENV project_root /home/openerp/
 ENV project_url http://nightly.openerp.com/7.0/nightly/src/openerp-7.0-latest.tar.gz
 
 RUN adduser --system --home=$project_root --group openerp && \
-    apt-get -y install python-dateutil python-docutils python-feedparser \
-        python-gdata python-jinja2 python-libxslt1 \
-        python-mako python-mock python-openid python-psutil \
-        python-pybabel python-pychart python-pydot python-pyparsing \
-        python-simplejson python-tz python-unittest2 \
-        python-vatnumber python-vobject python-webdav python-werkzeug \
-        python-xlwt python-yaml python-zsi python-reportlab python-psycopg2 \
-        postgresql-client-9.1 python-cups python-django-auth-ldap
+    apt-get -y install python-setuptools python-dev build-essential python-ldap
 
 RUN apt-get -y install wget sudo bzip2
 
